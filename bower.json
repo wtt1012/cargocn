@@ -20,6 +20,11 @@
   "dependencies": {
     "jquery": "~1.12.4",
     "fullpage.js": "^2.9.2",
-    "forkit": "*"
+    "forkit": "*",
+    "bootstrap": "boostrap#3.3.6",
+    "bootstrap-sass": "3.3.6",
+    "font-awesome": "fontawesome#^4.7.0",
+    "bootstrap-social": "^5.1.1",
+    "jquery-migrate": "1.4.0"
   }
 }

@@ -259,6 +259,22 @@ gulp.task('watchcopy', function () {
     })
 })
 
+// Copy vendor libraries from /bower_components into /vendor
+gulp.task('copybower', function() {
+    gulp.src(['bower_components/jquery/dist/jquery.js', 'bower_components/jquery/dist/jquery.min.js'])
+        .pipe(gulp.dest('vendor/jquery'))
+
+    gulp.src(['bower_components/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
+        .pipe(gulp.dest('vendor/bootstrap'))
+
+    gulp.src(['bower_components/bootstrap-social/*.css', 'bower_components/bootstrap-social/*.less', 'bower_components/bootstrap-social/*.scss'])
+        .pipe(gulp.dest('vendor/bootstrap-social'))
+
+    gulp.src(['bower_components/font-awesome/**/*', '!bower_components/font-awesome/*.json', '!bower_components/font-awesome/.*'])
+        .pipe(gulp.dest('vendor/font-awesome'))
+    
+})
+
 
 // 使用 gulp.task('default') 定义默认任务
 // 在命令行使用 gulp 启动 uglifyjs 任务和 auto 任务
