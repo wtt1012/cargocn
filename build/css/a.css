@@ -1,0 +1,16 @@
+/* a.css */
+body a{
+    color:pink;
+}
+.import .a1 {
+  color: red;
+}
+.import a {
+  color: red;
+}
+.import .b1 {
+  color: red;
+}
+.demo {
+    display:flex;
+}

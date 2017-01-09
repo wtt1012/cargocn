@@ -1,0 +1,25 @@
+{
+  "name": "cargocn",
+  "description": "cargocn",
+  "main": "gulpfile.js",
+  "authors": [
+    "gottaBoy"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "cargocn"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.12.4",
+    "fullpage.js": "^2.9.2",
+    "forkit": "*"
+  }
+}
