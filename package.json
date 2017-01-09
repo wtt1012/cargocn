@@ -1,0 +1,28 @@
+{
+  "name": "cargocn",
+  "version": "1.0.0",
+  "description": "cargocn",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-less": "^3.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^1.5.4",
+    "gulp-util": "^3.0.8",
+    "gulp-watch-path": "^0.1.0",
+    "stream-combiner2": "^1.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gottaBoy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nimojs/gulp-demo/issues"
+  },
+  "homepage": "https://github.com/gottaBoy/cargocn"
+}
