@@ -25,6 +25,7 @@
     "bootstrap-sass": "3.3.6",
     "font-awesome": "fontawesome#^4.7.0",
     "bootstrap-social": "^5.1.1",
-    "jquery-migrate": "1.4.0"
+    "jquery-migrate": "1.4.0",
+    "autosize": "^3.0.20"
   }
 }

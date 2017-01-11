@@ -33,6 +33,20 @@ var uglify = require('gulp-uglify')
 // 获取 gulp-imagemin 模块
 var imagemin = require('gulp-imagemin')
 
+//var livereload = require('gulp-livereload')
+var browserSync = require('browser-sync').create()
+
+var pkg = require('./package.json')
+
+// Set the banner content
+var banner = ['/*!\n',
+    ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
+    ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
+    ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n',
+    ' */\n',
+    ''
+].join('');
+
 gulp.task('log', function () {
     gutil.log('message')
     gutil.log(gutil.colors.red('error'))
@@ -275,6 +289,22 @@ gulp.task('copybower', function() {
     
 })
 
+
+// Configure the browserSync task
+gulp.task('browserSync', function() {
+    browserSync.init({
+        server: {
+            baseDir: './',
+            index: "starter.html"
+        }
+    })
+})
+
+gulp.task('devPage', ['browserSync'], function() {
+    // Reloads the browser whenever HTML or JS files change
+    //gulp.watch('sass/*.scss', ['sass']);
+    gulp.watch('pages/*.html', browserSync.reload);
+});
 
 // 使用 gulp.task('default') 定义默认任务
 // 在命令行使用 gulp 启动 uglifyjs 任务和 auto 任务
