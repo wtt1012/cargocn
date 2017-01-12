@@ -4,12 +4,12 @@ html {
 
 }
 
-body {
-    margin: 0;
+body,html {
+    height:100%;
+    width: 100%;
+    font-family: "微软雅黑",'Microsoft YaHei','Noto Sans', sans-serif;
    
-
 }
-
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
     display: block
 }
@@ -438,6 +438,25 @@ p {
     overflow: hidden
 }
 
+// .carousel-inner .item{
+//     height:556px;
+//     overflow: hidden;
+// }
+
+.side .side-1 .item about {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+// @media only screen and (max-width: 790px){
+//         .carousel-inner .item{
+//             height:256px;
+//             overflow: hidden;
+//         }
+
+    
+// }
 .side.side-2 .item-wrap,.side.side-3 .item-wrap,.side.side-4 .item-wrap,.side.side-5 .item-wrap {
     width: 100%;
     display: table
@@ -4404,35 +4423,88 @@ p {
     }
 }
 
+
+#navi .nav-0 a.active {
+ 
+    background: #edc700;
+}
+#navi .nav-1 a.active {
+
+    background: #31BEBC;
+}
+#navi .nav-2 a.active {
+ 
+    background: #ffeb0a;
+}
+#navi .nav-3 a.active {
+
+    background: #0aa6ff;
+}
+#navi .nav-4 a.active {
+
+    background: #e1564c;
+}
+
+
+#navi .nav-0 a:hover{
+    background: #edc700;
+    border-radius: 7px;
+}
+#navi .nav-1 a:hover{
+    background: #31BEBC;
+    border-radius: 7px;
+}
+#navi .nav-2 a:hover{
+    background: #ffeb0a;
+    border-radius: 7px;
+}
+#navi .nav-3 a:hover{
+    background: #0aa6ff;
+    border-radius: 7px;
+}
+#navi .nav-4 a:hover{
+    background: #e1564c;
+    border-radius: 7px;
+}
+
 #navi {
     list-style: none;
     margin: 0;
     padding: 0;
     position: fixed;
     height: 105px;
-    right: 30px;
+    right: 0;
     top: 50%;
     margin-top: -52px;
     z-index: 9998
 }
-
+.glyphicon {
+    top: 10px;
+    color: #fff
+}
 #navi li a {
     border: 2px solid #fff;
     display: block;
-    width: 9px;
-    height: 9px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
     border-radius: 7px;
     margin-bottom: 10px
 }
 
-#navi li a:hover {
-    background: #000
+#navi .nav-1 a span {
+    display: block; 
+    width: 60px; 
+    height: 27px; 
+    font-size: 12px; 
+    text-indent: 200px; 
+    opacity: 0.6; filter:alpha(opacity=60); 
+    overflow: hidden;
 }
-
-#navi li a.active {
-    border-color: #edc700;
-    background: #edc700
-}
+#navi .nav-1 a:hover span { 
+    text-indent: 0;
+    float: left;
+    }
 
 #subnav {
     display: block;
@@ -6555,107 +6627,72 @@ a:active,a:focus,a:hover {
     color: #fff
 }
 
-.bd-button {
-    background: url(../../../images/bd-button.png) no-repeat;
+#slider .wrap {
+        top: 400px;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        display: inline-block;
+        -moz-text-shadow: 1px 1px 1px #000;
+        -webkit-text-shadow: 1px 1px 1px #000;
+        text-shadow: 1px 1px 1px #000;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#000')";
+        filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1,Direction=135,Color='#000')
+
+
+}
+
+
+.button-register {
     width: 180px;
     height: 47px;
-    color: #fff;
+    border-radius: 25px;
+    border: 2px solid #fff;
+    margin: 0 5px;
     text-align: center;
     font: 15px/47px ralewaybold;
     display: inline-block;
     text-transform: uppercase;
-    position: relative
 }
 
-.bd-button span.hover {
-    background: url(../../../images/bd-button.png) no-repeat;
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    background-position: 0 -47px;
+.button-login{
     width: 180px;
     height: 47px;
-    cursor: pointer
+    border-radius: 25px;
+    border: 2px solid #fff;
+    margin: 0 5px;
+    text-align: center;
+    font: 15px/47px ralewaybold;
+    display: inline-block;
+    text-transform: uppercase;
 }
+
+.button-register:hover {
+    border-radius: 25px;
+    border: 2px solid #fff;
+    background: #edc700;
+
+}
+.button-login:hover {
+    border-radius: 25px;
+    border-color: #fff;
+    background-color: #edc700;
+
+}
+
 
 .bd-button span.hover:active,.bd-button span.hover:focus {
     background-position: right bottom
 }
 
-.bd-button:active,.bd-button:hover,.bd-button:visited {
+.button-register:active,.button-register:hover,.button-register:visited {
     color: #fff
 }
 
-.big-bd-button {
-    height: 47px;
-    color: #fff;
-    text-align: center;
-    font: 15px/47px ralewaybold;
-    display: inline-block;
-    text-transform: uppercase;
-    position: relative;
-    background: url(../../../images/big-bd-button.png) no-repeat;
-    width: 224px
-}
-
-.big-bd-button:active,.big-bd-button:hover,.big-bd-button:visited {
+.button-login:active,.button-login:hover,.button-login:visited {
     color: #fff
 }
 
-.big-bd-button span.hover {
-    background: url(../../../images/big-bd-button.png) no-repeat;
-    width: 224px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    background-position: 0 -47px;
-    height: 47px;
-    cursor: pointer
-}
-
-.big-bd-button span.hover:active,.big-bd-button span.hover:focus {
-    background-position: right bottom
-}
-
-.bd-button-work {
-    text-align: center;
-    font: 15px/47px ralewaybold;
-    display: inline-block;
-    text-transform: uppercase;
-    position: relative;
-    background: url(../../../images/bd-button-work.png) no-repeat;
-    width: 203px;
-    height: 53px;
-    color: #000;
-    line-height: 53px
-}
-
-.bd-button-work span.hover {
-    background: url(../../../images/bd-button-work.png) no-repeat;
-    width: 203px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    background-position: 0 -53px;
-    height: 53px;
-    line-height: 53px;
-    cursor: pointer
-}
-
-.bd-button-work span.hover:active,.bd-button-work span.hover:focus {
-    background-position: right bottom
-}
-
-.bd-button-work:visited {
-    color: #000
-}
-
-.bd-button-work:active,.bd-button-work:hover {
-    color: #fff
-}
 
 #loader {
     position: fixed;
@@ -6712,7 +6749,7 @@ body {
     background-image: url(../images/logo.png);
     width: 234px;
     height: 45px;
-    margin-left: 200px;
+    // margin-left: 200px;
     float: left
 }
 
@@ -6842,6 +6879,7 @@ body {
 
 #header.portfolio {
     background: #fff;
+    padding: 0;
     position: fixed
 }
 
@@ -6849,7 +6887,7 @@ body {
     background-image: url(../images/logo1.png);
     width: 234px;
     height: 45px;
-    margin-left: 200px;
+
     
 }
 
@@ -7853,7 +7891,7 @@ body.single {
 
 .forkit {
     position: fixed;
-    right: -30px;
+    right: 0;
     top: 0;
     z-index: 99998;
     width: 190px;
@@ -8486,12 +8524,7 @@ body.single {
         font: 72px/72px pacificoregular
     }
 
-    #home-slider-wrap .item .item-text-wrap h1.text {
-        font: 18px/24px ralewaymedium;
-        padding-left: 20px;
-        margin: 10px 0 20px
-    }
-
+   
     #single-work,#works-wrap {
         padding: 79px 0 0
     }
@@ -8789,7 +8822,7 @@ body.single {
     }
 
     #header.portfolio .header #logo {
-        width: 160px;
+        width: 234px;
         top: 0
     }
 
@@ -11310,6 +11343,17 @@ body.scroll,html.scroll {
 .footer-bottom{
     padding-top: 44px;
     padding-bottom: 44px;
+    color: #636363;
     text-align: center
 }
+.item-text .center-text{
+    text-align: center;
+    margin:200px 100px;
+}
+@media only screen and (max-width: 790px){
+       .item-text .center-text{
+        text-align: center;
+        margin:10px 30px;
 
+    }
+}
