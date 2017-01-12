@@ -7,7 +7,7 @@ html {
 body,html {
     height:100%;
     width: 100%;
-    font-family: "微软雅黑",'Microsoft YaHei','Noto Sans', sans-serif;
+    font-family: 'Microsoft YaHei','Noto Sans', sans-serif;
    
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
@@ -191,9 +191,9 @@ p {
 }
 
 @font-face {
-    font-family: ralewaybold;
+    font-family: Microsoft YaHei;
     src../fonts/raleway-bold-webfont.eot);
-    src../fonts/raleway-bold-webfont.eot?#iefix) format("embedded-opentype"../fonts/raleway-bold-webfont.woff) format("woff"),url(../fonts/raleway-bold-webfont.ttf) format("truetype"),url(../fonts/raleway-bold-webfont.svg#ralewaybold) format("svg");
+    src../fonts/raleway-bold-webfont.eot?#iefix) format("embedded-opentype"../fonts/raleway-bold-webfont.woff) format("woff"),url(../fonts/raleway-bold-webfont.ttf) format("truetype"),url(../fonts/raleway-bold-webfont.svg#Microsoft YaHei) format("svg");
     font-weight: 400;
     font-style: normal
 }
@@ -247,9 +247,9 @@ p {
 }
 
 @font-face {
-    font-family: ralewaysemibold;
+    font-family: Microsoft YaHei;
     src: url(../fonts/raleway-semibold-webfont.eot);
-    src: url(../fonts/raleway-semibold-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/raleway-semibold-webfont.woff) format("woff"),url(../fonts/raleway-semibold-webfont.ttf) format("truetype"),url(../fonts/raleway-semibold-webfont.svg#ralewaysemibold) format("svg");
+    src: url(../fonts/raleway-semibold-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/raleway-semibold-webfont.woff) format("woff"),url(../fonts/raleway-semibold-webfont.ttf) format("truetype"),url(../fonts/raleway-semibold-webfont.svg#Microsoft YaHei) format("svg");
     font-weight: 400;
     font-style: normal
 }
@@ -263,9 +263,9 @@ p {
 }
 
 @font-face {
-    font-family: pacificoregular;
+    font-family: Microsoft YaHei;
     src: url(../fonts/pacifico-webfont.eot);
-    src: url(../fonts/pacifico-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/pacifico-webfont.woff) format("woff"),url(../fonts/pacifico-webfont.ttf) format("truetype"),url(../fonts/pacifico-webfont.svg#pacificoregular) format("svg");
+    src: url(../fonts/pacifico-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/pacifico-webfont.woff) format("woff"),url(../fonts/pacifico-webfont.ttf) format("truetype"),url(../fonts/pacifico-webfont.svg#Microsoft YaHei) format("svg");
     font-weight: 400;
     font-style: normal
 }
@@ -465,7 +465,7 @@ p {
 .side.side-2 .item-wrap .item-text,.side.side-3 .item-wrap .item-text,.side.side-4 .item-wrap .item-text,.side.side-5 .item-wrap .item-text {
     display: table-cell;
     vertical-align: middle;
-    font: 46px ralewaybold;
+    font: 46px Microsoft YaHei;
     color: #fff;
     width: 100%;
     text-align: center;
@@ -478,7 +478,7 @@ p {
 }
 
 .side.side-2 .item-wrap .item-text .text span,.side.side-3 .item-wrap .item-text .text span,.side.side-4 .item-wrap .item-text .text span,.side.side-5 .item-wrap .item-text .text span {
-    font: 46px pacificoregular;
+    font: 46px Microsoft YaHei;
     color: #000;
     text-shadow: none!important
 }
@@ -490,12 +490,12 @@ p {
 
 .side.side-2 .item-text,.side.side-3 .item-text,.side.side-4 .item-text,.side.side-5 .item-text,.side.side-6 .item-text {
     top: 50%;
-    font: 46px ralewaybold;
+    font: 46px Microsoft YaHei;
     color: #fff
 }
 
 .side.side-2 .item-text span,.side.side-3 .item-text span,.side.side-4 .item-text span,.side.side-5 .item-text span,.side.side-6 .item-text span {
-    font: 46px pacificoregular;
+    font: 46px Microsoft YaHei;
     color: #000;
     text-shadow: none!important
 }
@@ -568,7 +568,7 @@ p {
     width: 260px;
     overflow-x: none;
     overflow-y: auto;
-    font-family: ralewaysemibold;
+    font-family: Microsoft YaHei;
     font-size: 15px;
     background: #333;
     color: #fff;
@@ -749,7 +749,7 @@ p {
 }
 
 #home-slider-wrap .item .item-text-wrap .title {
-    font: 92px/92px pacificoregular;
+    font: 92px/92px Microsoft YaHei;
     color: #fff;
     opacity: 0
 }
@@ -4535,12 +4535,12 @@ p {
 .side {
     float: left;
     width: 100%;
-    font: 46px ralewaybold;
+    font: 46px Microsoft YaHei;
     color: #fff
 }
 
 .side span.black {
-    font: 46px pacificoregular;
+    font: 46px Microsoft YaHei;
     color: #000;
     text-shadow: none!important
 }
@@ -6650,7 +6650,7 @@ a:active,a:focus,a:hover {
     border: 2px solid #fff;
     margin: 0 5px;
     text-align: center;
-    font: 15px/47px ralewaybold;
+    font: 15px/47px Microsoft YaHei;
     display: inline-block;
     text-transform: uppercase;
 }
@@ -6662,7 +6662,7 @@ a:active,a:focus,a:hover {
     border: 2px solid #fff;
     margin: 0 5px;
     text-align: center;
-    font: 15px/47px ralewaybold;
+    font: 15px/47px Microsoft YaHei;
     display: inline-block;
     text-transform: uppercase;
 }
@@ -6762,7 +6762,7 @@ body {
     background: url(../../../images/rq.png) no-repeat;
     display: block;
     height: 34px;
-    font: 14px/34px ralewaybold;
+    font: 14px/34px Microsoft YaHei;
     color: #000;
     float: right;
     width: 174px;
@@ -6776,7 +6776,7 @@ body {
 
 #header .header #m-nav {
     clear: both;
-    font: 20px/34px ralewaysemibold;
+    font: 20px/34px Microsoft YaHei;
     text-transform: uppercase;
     color: #fff;
     position: absolute;
@@ -6803,7 +6803,7 @@ body {
 
 #header .header #nav ul li a {
     display: inline-block;
-    font: 17px/34px ralewaysemibold;
+    font: 17px/34px Microsoft YaHei;
     text-transform: uppercase;
     color: #fff;
     margin: 0 20px;
@@ -6861,7 +6861,7 @@ body {
 }
 
 #header .header #nav ul ul li a {
-    font: 14px/14px ralewaysemibold;
+    font: 14px/14px Microsoft YaHei;
     height: auto;
     color: #fff!important;
     display: block;
@@ -7117,7 +7117,7 @@ body {
 
 #footer #footer-nav ul li a {
     display: inline-block;
-    font: 15px/20px ralewaysemibold;
+    font: 15px/20px Microsoft YaHei;
     text-transform: uppercase;
     color: #000;
     margin: 0 10px;
@@ -7206,7 +7206,7 @@ body {
 }
 
 #service .service-item .service-item-text .title {
-    font: 80px/80px pacificoregular;
+    font: 80px/80px Microsoft YaHei;
     color: #FFF;
     -moz-text-shadow: 1px 1px 1px #000;
     -webkit-text-shadow: 1px 1px 1px #000;
@@ -7246,7 +7246,7 @@ body {
 }
 
 #service.about .service-item-text .text strong {
-    font-family: ralewaybold
+    font-family: Microsoft YaHei
 }
 
 #vids {
@@ -7371,7 +7371,7 @@ body {
 }
 
 #s-content .section .layout .text .text-wrap .title strong {
-    font-family: ralewaybold
+    font-family: Microsoft YaHei
 }
 
 #s-content .section .layout .text .text-wrap .subtitle {
@@ -7380,7 +7380,7 @@ body {
 }
 
 #s-content .section .layout .text .text-wrap .subtitle strong {
-    font-family: ralewaybold
+    font-family: Microsoft YaHei
 }
 
 #s-content .section .layout .text .text-wrap p {
@@ -7628,7 +7628,7 @@ body.single {
 }
 
 #single-work #work-images .work-responsive .wrap .title {
-    font: 38px/38px ralewaybold;
+    font: 38px/38px Microsoft YaHei;
     margin-bottom: 40px;
     text-transform: uppercase;
     color: #000
@@ -7646,13 +7646,13 @@ body.single {
 }
 
 #team-wrap h1 {
-    font: 80px/80px pacificoregular;
+    font: 80px/80px Microsoft YaHei;
     color: #fff;
     margin: 0 0 15px
 }
 
 #team-wrap p {
-    font: 34px/34px ralewaybold;
+    font: 34px/34px Microsoft YaHei;
     padding-left: 10px
 }
 
@@ -7697,12 +7697,12 @@ body.single {
 }
 
 #team li .desc {
-    font: 23px/23px ralewaysemibold;
+    font: 23px/23px Microsoft YaHei;
     color: #fff
 }
 
 #team li .desc .title {
-    font: 38px/38px ralewaybold;
+    font: 38px/38px Microsoft YaHei;
     color: #000;
     margin-bottom: 10px
 }
@@ -7726,7 +7726,7 @@ body.single {
 }
 
 #contact .contact-wrap .contact-content h1 {
-    font: 80px/80px pacificoregular;
+    font: 80px/80px Microsoft YaHei;
     color: #f1c40f;
     text-transform: capitalize;
     margin: 0 0 25px;
@@ -7734,7 +7734,7 @@ body.single {
 }
 
 #contact .contact-wrap .contact-content .desc {
-    font: 35px/40px ralewaybold;
+    font: 35px/40px Microsoft YaHei;
     position: relative
 }
 
@@ -7793,12 +7793,12 @@ body.single {
 }
 
 #contact .contact-wrap .contact-content ul .contact-item .contact-text .tit {
-    font: 19px/19px ralewaysemibold;
+    font: 19px/19px Microsoft YaHei;
     margin-bottom: 7px
 }
 
 #contact .contact-wrap .contact-content ul .contact-item .contact-text p {
-    font: 14px/19px ralewaysemibold
+    font: 14px/19px Microsoft YaHei
 }
 
 #contact .contact-wrap .contact-content ul .contact-item .contact-text a {
@@ -7812,7 +7812,7 @@ body.single {
 
 #contact .contact-wrap .contact-content #show-contact-form {
     width: 190px;
-    font: 19px/19px ralewaysemibold;
+    font: 19px/19px Microsoft YaHei;
     color: #fff;
     text-decoration: none;
     text-align: center;
@@ -7844,7 +7844,7 @@ body.single {
 }
 
 #contact .contact-wrap .contact-content #contact-form div input {
-    font: 13px/13px ralewaybold;
+    font: 13px/13px Microsoft YaHei;
     background: 0 0;
     border: solid 2px #FFF;
     width: 219px;
@@ -7860,7 +7860,7 @@ body.single {
 }
 
 #contact .contact-wrap .contact-content #contact-form div textarea {
-    font: 13px/13px ralewaybold;
+    font: 13px/13px Microsoft YaHei;
     background: 0 0;
     border: solid 2px #FFF;
     width: 201px;
@@ -7879,12 +7879,12 @@ body.single {
 
 #contact .contact-wrap .contact-content #contact-form div.wpcf7-response-output,#contact .contact-wrap .contact-content #contact-form div.wpcf7-validation-errors {
     clear: both;
-    font: 12px/12px ralewaybold
+    font: 12px/12px Microsoft YaHei
 }
 
 #contact .contact-wrap .contact-content #contact-form span.wpcf7-not-valid-tip {
     text-align: left;
-    font: 12px/12px ralewaybold;
+    font: 12px/12px Microsoft YaHei;
     position: absolute;
     bottom: 5px
 }
@@ -7969,7 +7969,7 @@ body.single {
 }
 
 #request_form .title {
-    font: 44px/44px pacificoregular;
+    font: 44px/44px Microsoft YaHei;
     color: #fff;
     margin-bottom: 25px;
     text-align: center
@@ -8005,7 +8005,7 @@ body.single {
     width: 80%;
     height: 14px;
     padding: 15px 3% 15px 17%;
-    font: 13px/13px ralewaybold;
+    font: 13px/13px Microsoft YaHei;
     color: #f1c40f;
     border: 2px solid #fff;
     border-radius: 3px
@@ -8037,7 +8037,7 @@ body.single {
     background: 0 0;
     width: 96%;
     padding: 2%;
-    font: 13px/16px ralewaybold;
+    font: 13px/16px Microsoft YaHei;
     border: 2px solid #fff;
     resize: none;
     border-radius: 3px;
@@ -8045,7 +8045,7 @@ body.single {
 }
 
 .form-wrap .rq-form #file {
-    font: 13px/16px ralewaybold
+    font: 13px/16px Microsoft YaHei
 }
 
 .form-wrap .rq-form .submit-wrap {
@@ -8054,7 +8054,7 @@ body.single {
 }
 
 .form-wrap .rq-form .submit-wrap #quote-submit {
-    font: 14px/14px ralewaybold;
+    font: 14px/14px Microsoft YaHei;
     background: #f1c40f;
     color: #000;
     padding: 10px 15px;
@@ -8064,12 +8064,12 @@ body.single {
 
 .form-wrap .rq-form .wpcf7-response-output,.form-wrap .rq-form div.wpcf7-validation-errors {
     clear: both;
-    font: 12px/12px ralewaybold
+    font: 12px/12px Microsoft YaHei
 }
 
 .form-wrap .rq-form span.wpcf7-not-valid-tip {
     text-align: left;
-    font: 12px/12px ralewaybold;
+    font: 12px/12px Microsoft YaHei;
     bottom: 5px;
     right: 0;
     position: absolute
@@ -8124,7 +8124,7 @@ body.single {
 }
 
 #about .about .title strong,#about .about3 .title strong {
-    font-family: ralewaybold;
+    font-family: Microsoft YaHei;
     word-wrap: break-word
 }
 
@@ -8135,7 +8135,7 @@ body.single {
 }
 
 #about .about .subtitle strong,#about .about3 .subtitle strong {
-    font-family: ralewaybold
+    font-family: Microsoft YaHei
 }
 
 #about .about .about-content,#about .about3 .about-content {
@@ -8200,7 +8200,7 @@ body.single {
 }
 
 #design .design .title strong {
-    font-family: ralewaybold
+    font-family: Microsoft YaHei
 }
 
 #design .design .subtitle {
@@ -8210,7 +8210,7 @@ body.single {
 }
 
 #design .design .subtitle strong {
-    font-family: ralewaybold
+    font-family: Microsoft YaHei
 }
 
 #design .design .design-content {
@@ -8237,7 +8237,7 @@ body.single {
 }
 
 #design .design p.big strong {
-    font-family: ralewaybold
+    font-family: Microsoft YaHei
 }
 
 #design .design .thumb {
@@ -8275,7 +8275,7 @@ body.single {
 
 @media only screen and (max-width: 1380px) {
     .side.side-2 .item-wrap .item-text,.side.side-3 .item-wrap .item-text,.side.side-4 .item-wrap .item-text,.side.side-5 .item-wrap .item-text {
-        font:35px ralewaybold
+        font:35px Microsoft YaHei
     }
 
     .side.side-2 .item-wrap .item-text .text span,.side.side-3 .item-wrap .item-text .text span,.side.side-4 .item-wrap .item-text .text span,.side.side-5 .item-wrap .item-text .text span {
@@ -8513,7 +8513,7 @@ body.single {
     }
 
     .side.side-2 .item-wrap .item-text,.side.side-3 .item-wrap .item-text,.side.side-4 .item-wrap .item-text,.side.side-5 .item-wrap .item-text {
-        font: 35px ralewaybold
+        font: 35px Microsoft YaHei
     }
 
     .side.side-2 .item-wrap .item-text .text span,.side.side-3 .item-wrap .item-text .text span,.side.side-4 .item-wrap .item-text .text span,.side.side-5 .item-wrap .item-text .text span {
@@ -8521,7 +8521,7 @@ body.single {
     }
 
     #home-slider-wrap .item .item-text-wrap .title {
-        font: 72px/72px pacificoregular
+        font: 72px/72px Microsoft YaHei
     }
 
    
@@ -8547,7 +8547,7 @@ body.single {
     }
 
     #service .service-item .service-item-text .title {
-        font: 34px/34px pacificoregular;
+        font: 34px/34px Microsoft YaHei;
         margin-bottom: 20px
     }
 
@@ -8640,17 +8640,17 @@ body.single {
     }
 
     #single-work #work-images .work-responsive .wrap .title {
-        font: 28px/28px ralewaybold;
+        font: 28px/28px Microsoft YaHei;
         margin-bottom: 20px
     }
 
     #contact .contact-wrap .contact-content h1 {
-        font: 50px/50px pacificoregular;
+        font: 50px/50px Microsoft YaHei;
         margin-top: 20px
     }
 
     #contact .contact-wrap .contact-content .desc {
-        font: 16px/20px ralewaybold
+        font: 16px/20px Microsoft YaHei
     }
 
     #team li {
@@ -8663,7 +8663,7 @@ body.single {
     }
 
     #home-slider-wrap .item .item-text-wrap .title {
-        font: 42px/42px pacificoregular
+        font: 42px/42px Microsoft YaHei
     }
 
     #home-slider-wrap .item .item-text-wrap h1.text {
@@ -8686,7 +8686,7 @@ body.single {
     }
 
     #design .design p.big strong {
-        font-family: ralewaybold
+        font-family: Microsoft YaHei
     }
 }
 
@@ -8870,13 +8870,13 @@ body.single {
     }
 
     #single-work #work-images .work-responsive .wrap .title {
-        font: 18px/18px ralewaybold;
+        font: 18px/18px Microsoft YaHei;
         margin-top: 10px;
         margin-bottom: 10px
     }
 
     .item .item-text .title,.item .item-text-wrap .title {
-        font: 32px/32px pacificoregular
+        font: 32px/32px Microsoft YaHei
     }
 
     .item .item-text .text,.item .item-text-wrap .text {
@@ -8910,7 +8910,7 @@ body.single {
     }
 
     .side.side-2 .item .item-text,.side.side-3 .item .item-text,.side.side-4 .item .item-text,.side.side-5 .item .item-text,.side.side-6 .item .item-text {
-        font: 26px ralewaybold
+        font: 26px Microsoft YaHei
     }
 
     .side.side-2 .item .item-text span,.side.side-3 .item .item-text span,.side.side-4 .item .item-text span,.side.side-5 .item .item-text span,.side.side-6 .item .item-text span {
@@ -8966,7 +8966,7 @@ body.single {
     }
 
     #service .service-item .service-item-text .title {
-        font: 34px/34px pacificoregular;
+        font: 34px/34px Microsoft YaHei;
         margin-bottom: 20px
     }
 
@@ -8981,7 +8981,7 @@ body.single {
     }
 
     #team-wrap h1 {
-        font: 50px/50px pacificoregular;
+        font: 50px/50px Microsoft YaHei;
         margin-bottom: 10px
     }
 
@@ -9002,7 +9002,7 @@ body.single {
     }
 
     #request_form .title {
-        font: 24px/24px pacificoregular;
+        font: 24px/24px Microsoft YaHei;
         color: #fff;
         margin-bottom: 15px
     }
@@ -9075,14 +9075,14 @@ body.single {
     }
 
     #contact .contact-wrap .contact-content h1 {
-        font: 32px/32px pacificoregular;
+        font: 32px/32px Microsoft YaHei;
         color: #f1c40f;
         text-transform: capitalize;
         margin: 0 0 20px
     }
 
     #contact .contact-wrap .contact-content .desc {
-        font: 20px/30px ralewaybold
+        font: 20px/30px Microsoft YaHei
     }
 
     #contact .contact-wrap .contact-content ul .contact-item {
@@ -9125,7 +9125,7 @@ body.single {
     }
 
     #slider #home-slider-wrap .item .item-text-wrap .title {
-        font: 42px/42px pacificoregular;
+        font: 42px/42px Microsoft YaHei;
         padding: 0 10%
     }
 
@@ -9308,11 +9308,11 @@ body.scroll,html.scroll {
 }
 
 .ui-datepicker th {
-    font-family: ralewaybold
+    font-family: Microsoft YaHei
 }
 
 .ui-datepicker .ui-datepicker-title {
-    font: 14px/27px ralewaybold;
+    font: 14px/27px Microsoft YaHei;
     text-align: center;
     color: #000;
     background-color: #f7dd8b
@@ -9490,7 +9490,7 @@ body.scroll,html.scroll {
 
 .bdr .steps .step {
     float: left;
-    font-family: ralewaybold;
+    font-family: Microsoft YaHei;
     text-align: left;
     background: url(../../../images/libs/step.png) no-repeat
 }
@@ -9531,12 +9531,12 @@ body.scroll,html.scroll {
 }
 
 .bdr .title {
-    font-family: pacificoregular;
+    font-family: Microsoft YaHei;
     border-bottom: 2px solid #fff
 }
 
 .bdr .subtitle {
-    font-family: ralewaybold;
+    font-family: Microsoft YaHei;
     text-transform: uppercase
 }
 
@@ -9600,7 +9600,7 @@ body.scroll,html.scroll {
     top: -30px;
     width: 70px;
     left: -30px;
-    font: 15px/20px ralewaybold;
+    font: 15px/20px Microsoft YaHei;
     color: #000;
     white-space: nowrap;
     text-align: center
@@ -9623,7 +9623,7 @@ body.scroll,html.scroll {
     color: #000;
     width: 240px;
     height: 74px;
-    font: 22px/74px ralewaybold;
+    font: 22px/74px Microsoft YaHei;
     text-transform: uppercase;
     border-radius: 74px;
     outline: 0;
@@ -10157,12 +10157,12 @@ body.scroll,html.scroll {
 }
 
 .bdr-start .title {
-    font-family: pacificoregular;
+    font-family: Microsoft YaHei;
     border-bottom: 2px solid #ebebeb
 }
 
 .bdr-start .subtitle {
-    font-family: ralewaybold;
+    font-family: Microsoft YaHei;
     text-transform: uppercase
 }
 
@@ -10227,7 +10227,7 @@ body.scroll,html.scroll {
 .bdr-start .btn.start {
     outline: 0;
     background-color: #f0c330;
-    font-family: ralewaybold;
+    font-family: Microsoft YaHei;
     text-transform: uppercase;
     color: #fff;
     border: 2px solid #f0c330;
@@ -10247,7 +10247,7 @@ body.scroll,html.scroll {
 }
 
 .bdr-start .rated strong {
-    font-family: ralewaybold
+    font-family: Microsoft YaHei
 }
 
 .bdr-start .rated span {
@@ -10762,7 +10762,7 @@ body.scroll,html.scroll {
     .bdr .submits .bdr-button {
         width: 110px;
         height: 50px;
-        font: 18px/48px ralewaybold;
+        font: 18px/48px Microsoft YaHei;
         border-radius: 50px
     }
 
@@ -11191,11 +11191,11 @@ body.scroll,html.scroll {
 }
 
 .thank-you .line-1 {
-    font-family: pacificoregular
+    font-family: Microsoft YaHei
 }
 
 .thank-you .line-2,.thank-you .line-3,.thank-you .line-4,.thank-you .line-5 {
-    font-family: ralewaybold
+    font-family: Microsoft YaHei
 }
 
 .thank-you .line-3 {
@@ -11304,7 +11304,7 @@ body.scroll,html.scroll {
 }
 
 .error404 #content h1,.page-id-400 #content h1,.page-id-402 #content h1 {
-    font: 23px/34px ralewaybold!important
+    font: 23px/34px Microsoft YaHei!important
 }
 
 .error404 #content p,.page-id-400 #content p,.page-id-402 #content p {
@@ -11313,7 +11313,7 @@ body.scroll,html.scroll {
 }
 
 .error404 #content p strong,.page-id-400 #content p strong,.page-id-402 #content p strong {
-    font: 16px/24px ralewaybold;
+    font: 16px/24px Microsoft YaHei;
     margin-bottom: 5px
 }
 
