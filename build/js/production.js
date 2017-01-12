@@ -18285,7 +18285,12 @@ BD = {
             $("#trends").find('.picture.box-content').animateOnScroll({scrollDownEffect: 'flipInX'});
             $("#identity").find('.picture.box-content').animateOnScroll({scrollDownEffect: 'rubberBand'});
             $("#personal").find('.picture.box-content').animateOnScroll({scrollDownEffect: 'rollIn'});
-            $("#style").find('.table').animateOnScroll({scrollDownEffect: 'rubberBand'});
+            $("#style").find('div.text').animateOnScroll({scrollDownEffect: 'rotateIn'});
+
+             $("#trends").find('.picture.box-content').animateOnScroll({scrollDownEffect: 'flipInX'});
+            $("#identity").find('.picture.box-content').animateOnScroll({scrollDownEffect: 'rubberBand'});
+            $("#personal").find('.picture.box-content').animateOnScroll({scrollDownEffect: 'rollIn'});
+            $("#style").find('.table').animateOnScroll({scrollDownEffect: 'fadeInRight'});
             $(document).on("scroll", onScroll);
 
             function onScroll(event){
