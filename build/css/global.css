@@ -4478,8 +4478,9 @@ p {
     margin-top: -52px;
     z-index: 9998
 }
-.glyphicon {
-    top: 10px;
+
+.icno{
+    top:10px;
     color: #fff
 }
 #navi li a {
@@ -6799,6 +6800,32 @@ body {
     display: inline-block;
     float: left;
     position: relative
+}
+
+#nav #menu-main #nav-right{
+    color: #fff;
+    float:left;
+    top:10px;
+    margin-left:100px;
+}
+#nav #menu-main #nav-right .glyphicon{
+        margin: 0 10px;
+}
+@media screen (width:779px){
+  #nav #menu-main #nav-right{
+    float:left;
+    margin-left:0px;
+}
+}
+
+#header.portfolio #nav #menu-main #nav-right .glyphicon {
+    margin: 0 10px;
+    color: #000;
+    text-shadow: none
+}
+#header.portfolio #nav #menu-main #nav-right {
+    color: #000;
+    text-shadow: none
 }
 
 #header .header #nav ul li a {
