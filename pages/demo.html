@@ -84,8 +84,8 @@
                                  
                       <div class="carousel-inner" role="listbox" >
 
-                        <div class="item active"><div class="postcard"> <img src="../build/images/page-1_img101.jpg"> </div></div>
-                        <div class="item"><div class="postcard"> <img src="../build/images/page-1_img101.jpg"> </div></div>
+                        <div class="item active"><div class="postcard"> <img src="../build/images/page-1_img102.jpg"> </div></div>
+                        <div class="item"><div class="postcard"> <img src="../build/images/page-1_img102.jpg"> </div></div>
                       </div>
                       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> <span class="sr-only">Next</span> </a> 
             </div>
@@ -93,8 +93,8 @@
 
         <div class="wrap"> 
 
-            <a href="" class="button-login">登录</a>
-            <a href="" class="button-register">注册中心</a>
+            <a href="" class="button-login" data-toggle="modal" data-target="#myModal">登录</a>
+            <a href="" class="button-register" data-toggle="modal" data-target="#Modal">注册中心</a>
 
         </div>
 
@@ -299,8 +299,87 @@
         </div>
     </div>  
  </footer>
+<!-- 登录 -->
+ <div class="animated bounceIn modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content" style="margin-top:250px;background: rgba(1, 1, 1, 0.45);">
+      <div class="modal-body">
+          <form id="contactForm" method="POST" autocomplete="off">
+                                                                <div class="row">
+                                                                    <div class="input-icon left" style="margin:15px"> <!-- <i class="fa fa-user"></i> -->
+                                                                        <input style="border:0;" type="text" class="form-control" name="userName" id="send_index" placeholder="请输入用户名" required>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="input-icon left" style="margin:15px;"> <!-- <i class="fa fa-unlock-alt"></i> -->
+                                                                        <input style="border:0;" type="text" class="form-control" name="passworder" id="arrive_index" placeholder="请输入密码" required>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-12" style="margin-top:22px;">
+                                                                        <input id="index_send" type="submit" value="登录" class="btn btn-primary btn-lg btn-block" data-loading-text="登录" style="border-radius: 4px">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row" style="font-size:12px">
+                                                                    <div class="form-group" style="margin-top:15px">
+                                                                        <div class="col-md-12 text-center" id="banner_send_info" style="color:#fff;">
+                                                                          没有账号？ <a href="" title="免费注册" style="color:#fff;">免费注册</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
 
- 
+
+<!-- 注册 -->
+ <div class="animated bounceIn modal fade" id="Modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content" style="margin-top:250px;background: rgba(1, 1, 1, 0.45);">
+      <div class="modal-body">
+          <form id="contactForm" class="form-horizontal" method="POST" autocomplete="off">
+                                                               
+                                                                <div class="form-group" style="margin-top:22px;">
+                                                                    <label class="control-label col-md-3" for="">手机号码</label>
+                                                                    <div class="col-md-6">
+                                                                          <input class="form-control" name="companyname" type="text" value="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="control-label col-md-3">手机验证码
+                                                                    </label>
+                                                                    <div class="col-md-4">
+                                                                        <div class="input-icon right">
+                                                                    
+                                                                            <input type="text" class="form-control" name="checkcode" id="checkcode" placeholder="手机验证码" disabled="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <input type="button" class="btn btn-primary btn-block" name="activecode" id="message_code" value="获取短信验证码" disabled="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="control-label col-md-3" for="">密码</label>
+                                                                    <div class="col-md-6">
+                                                                          <input class="form-control" name="companyname" type="text" value="">
+                                                                    </div>
+                                                                </div>
+                                                            <div class="row">
+                                                              <div class="form-group col-md-12">
+                                                                <div class="col-md-offset-3 col-md-6">
+                                                                  <button type="submit" class="btn btn-primary">提交</button>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
 <script type='text/javascript' src='../vendor/forkit/js/forkit.js'></script>
 <script type='text/javascript' src='../build/js/production.js'></script>
 <!-- <script>
