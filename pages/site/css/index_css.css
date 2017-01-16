@@ -1,0 +1,147 @@
+/* .cargocn-bg-image{ 
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-size:100%100%; 
+      color: #0E335E;
+}
+
+.img-responsive{
+      max-width:100%;
+      height:auto;
+      display:block;
+} */
+
+/* theme */
+header .well-md-theme {
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+@media (min-width: 992px){
+header .well-md-theme {
+    padding-top: 0px;
+    padding-bottom: 250px;
+}
+}
+.theme_cargocn{
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.text-secondary-1 {
+    color: #ffffff;
+}
+.well-i{
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+@media (min-width: 992px) {
+  .well-i{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+ }
+.p-color{
+  color:#616161;
+}
+.cargocn-bg-image{ 
+   padding-bottom: 60%;
+   height: auto;
+   margin: 0px;
+}  
+/* @media(min-width: 480px){
+.cargocn-bg-image{ 
+   padding-bottom: 60%;
+   height: auto;
+   margin: 0px;
+}  
+} */
+.cargocn-worth{
+  margin-left: 0px;
+  padding:30px 0px;
+}
+.cargocn-worth > img{
+  padding-bottom: 0%;
+  height: auto;
+  margin-left: 0px;
+}
+ /* @media (min-width: 480px) {
+ .cargocn-worth{
+  margin-left: 0px;
+  padding:30px 0px;
+ }
+ .cargocn-worth > img{
+  padding-bottom: 0%;
+  height: auto;
+  margin-left: 0px;
+ }
+ }
+ @media (min-width: 768px) {
+ .cargocn-worth{
+  margin-left: 0px;
+  padding:30px 0px;
+ }
+ .cargocn-worth > img{
+  padding-bottom: 0%;
+  height: auto;
+  margin-left: 0px;
+ }
+ } */
+ @media (min-width: 992px) {
+ .cargocn-worth{
+  margin-left: -40px;
+  padding:25px 0px;
+ }
+ .cargocn-worth > img{
+  padding-bottom: 0%;
+  height: auto;
+  margin-left: -80px;
+ }
+ }
+ @media (min-width: 1200px) {
+ .cargocn-worth{
+  margin-left: -40px;
+  padding:30px 0px;
+ }
+ .cargocn-worth > img{
+  padding-bottom: 0%;
+  height: auto;
+  margin-left: -80px;
+ }
+ } 
+ .p-m{
+  margin-left: 0px;
+ }
+ @media (min-width: 992px) {
+   .p-m{
+  margin-left: -80px;
+ }
+ }
+
+ .ip-text{
+  padding-left:10px; 
+  text-indent:-9px;
+  text-align: left;
+ }
+ @media(min-width: 768px){
+ .ip-text{
+  padding-left:0px; 
+ }
+ }
+ .ip-text{
+   margin: 0px 60px 0px 70px;
+ }
+ @media(min-width: 480px){
+.ip-text{
+  margin: 0px 80px 0px 90px;
+}
+ }
+ @media(min-width: 768px){
+.ip-text{
+  margin: 0px 6px 0px 16px;
+}
+ }
+ @media(min-width: 992px){
+.ip-text{
+  margin: 0px 0px 0px 0px;
+}
+ }
