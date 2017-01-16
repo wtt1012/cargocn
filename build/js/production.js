@@ -18282,15 +18282,15 @@ BD = {
             $("#personal").find('img.pic').animateOnScroll({scrollDownEffect: 'rollIn'});
             $("#style").find('img.pic').animateOnScroll({scrollDownEffect: 'fadeInLeftBig'});
    
-            $("#trends").find('.picture.box-content').animateOnScroll({scrollDownEffect: 'flipInX'});
+            $("#trends").find('div.text').animateOnScroll({scrollDownEffect: 'rotateIn'});
             $("#identity").find('.picture.box-content').animateOnScroll({scrollDownEffect: 'rubberBand'});
             $("#personal").find('.picture.box-content').animateOnScroll({scrollDownEffect: 'rollIn'});
-            $("#style").find('div.text').animateOnScroll({scrollDownEffect: 'rotateIn'});
+            $("#style").find('.picture.box-contentdiv.text').animateOnScroll({scrollDownEffect: 'rotateIn'});
 
-             $("#trends").find('.picture.box-content').animateOnScroll({scrollDownEffect: 'flipInX'});
+             $("#trends").find('.table').animateOnScroll({scrollDownEffect: 'fadeInRight'});
             $("#identity").find('.picture.box-content').animateOnScroll({scrollDownEffect: 'rubberBand'});
             $("#personal").find('.picture.box-content').animateOnScroll({scrollDownEffect: 'rollIn'});
-            $("#style").find('.table').animateOnScroll({scrollDownEffect: 'fadeInRight'});
+            $("#style").find('.picture.box-content').animateOnScroll({scrollDownEffect: 'fadeInRight'});
             $(document).on("scroll", onScroll);
 
             function onScroll(event){
