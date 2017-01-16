@@ -4449,22 +4449,27 @@ p {
 #navi .nav-0 a:hover{
     background: #edc700;
     border-radius: 7px;
+    color: #fff
 }
 #navi .nav-1 a:hover{
     background: #31BEBC;
     border-radius: 7px;
+    color: #fff
 }
 #navi .nav-2 a:hover{
     background: #ffeb0a;
     border-radius: 7px;
+    color: #fff
 }
 #navi .nav-3 a:hover{
     background: #0aa6ff;
     border-radius: 7px;
+    color: #fff
 }
 #navi .nav-4 a:hover{
     background: #e1564c;
     border-radius: 7px;
+    color: #fff
 }
 
 #navi {
@@ -4484,28 +4489,25 @@ p {
     color: #fff
 }
 #navi li a {
+    font: 15px/47px Microsoft YaHei;
     border: 2px solid #fff;
     display: block;
     text-align: center;
     width: 40px;
     height: 40px;
     border-radius: 7px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
-#navi .nav-1 a span {
-    display: block; 
-    width: 60px; 
-    height: 27px; 
-    font-size: 12px; 
-    text-indent: 200px; 
-    opacity: 0.6; filter:alpha(opacity=60); 
-    overflow: hidden;
-}
-#navi .nav-1 a:hover span { 
+
+#navi a:hover span { 
     text-indent: 0;
     float: left;
+
     }
+
+
+
 
 #subnav {
     display: block;
@@ -11405,3 +11407,4 @@ body.scroll,html.scroll {
     -ms-flex-pack: center;
     justify-content: center;
 }
+
