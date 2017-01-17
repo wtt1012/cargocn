@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="format-detection" content="telephone=no"/>
+     <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <title>在线询价</title>
+
+    <!-- Bootstrap -->
+<link href="../../vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"> 
+    <link href="css/header.css" rel="stylesheet">
+
+    <!-- Links -->
+
+    <!--JS-->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
+            <img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+        </a>
+    </div>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <script src='js/device.min.js'></script>
+   
+</head>
+<body>
+<div class="page">
+    <!-- SVG Sprite -->
+    <div style="height: 0; width: 0; position: absolute; visibility: hidden;" aria-hidden="true">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <symbol id="ripply-scott" viewBox="0 0 100 100">
+                <circle id="ripple-shape" cx="1" cy="1" r="1"/>
+            </symbol>
+        </svg>
+    </div>
+    <!-- /end sprite -->
+    <!--========================================================
+                              HEADER
+    =========================================================-->
+    <header class="mod-1">
+        <section class="well-sm">
+            <div id="stuck_container" class="stuck_container">
+                <div class="container">
+                    <nav class="navbar navbar-default navbar-static-top ">
+                        <div class="navbar-header">
+                            <h1>
+                                <a href="./index.html">
+                                    <img src="images/logo.png" alt=""/>
+                                </a>
+                            </h1>
+                        </div>
+                        <ul class="navbar1 sf-menu navbar-right" data-type="navbar">
+                            <li>
+                                <a href="../demo.html">首页</a>
+                            </li>
+                            <li class="dropdown">
+                               <!--  <a href="index-1.html">关于我们</a> -->
+                                <a href="./about.html#contact">在线询价</a>
+                                <!-- <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#introduction">公司简介</a>
+                                    </li>
+                                    <li>
+                                        <a href="#growth">发展历程</a>
+                                    </li>
+                                    <li>
+                                        <a href="#team">管理团队</a>
+                                    </li>
+                                    <li>
+                                        <a href="#contact">联系我们</a>
+                                    </li>
+                                </ul> -->
+                            </li>
+                            <li>
+                                <a href="#">我的运单</a>
+                            </li>
+
+                            <li>
+                                <a href="#">联系我们</a>
+                            </li>
+                            <li>
+                                <!-- <a href="http://www.cargocn.com/cargocn/n_index.do?show=down">下载</a> -->
+                                <!-- <a href="./download.html">下载</a> -->
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!--========================================================
+                              CONTENT
+    =========================================================-->
+
+    <main>
+        <!--About Me-->
+        <section class="well-9">
+            <div class="container">
+               <form class="form" method="post" id="releaseFormID" enctype="multipart/form-data" novalidate="novalidate">
+            
+            <input type="hidden" name="enquiry_object_id" id="enquiry_object_id" value="1">
+           
+           
+            <div style="margin-top:10px;"></div>
+            <p style="color: #57a2ec; font-weight: bold;">运输货品</p>
+            <hr style="border: 1px solid #57a2ec">
+        <div class="calculate">
+            <div class="col-md-3 col-sm-6 col-xs-12 form-group">
+                <label class="control-label">
+                    <i style="color: #F30202; margin-right: 5px">*</i> 货品名称
+                </label>
+                <input type="text" class="form-control" name="bidName" id="bidName">
+            </div>
+            
+            <div class="col-md-3 col-sm-6 col-xs-12 form-group">
+                <label class="control-label">
+                    <i style="color: #F30202; margin-right: 5px">*</i> 重量/吨
+                </label>
+                <input type="text" class="form-control" name="bidWeight" id="bidWeight" onchange="setTotalPrice()">
+            </div>
+    
+            <div class="col-md-3 col-sm-6 col-xs-12 form-group">
+                <label class="control-label">
+                    件数
+                </label>
+                <input type="text" class="form-control" name="bidNum" id="bidNum">
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 form-group">
+                <label class="control-label">
+                    体积/m³
+                </label>
+                <input type="text" class="form-control" name="bidVolume" id="bidVolume">
+        </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 form-group viewHide">
+                <label class="control-label">
+                    <i style="color: #F30202; margin-right: 5px">*</i>单价：元/吨
+                </label>
+                <input type="text" class="form-control inqueryShow ignore" name="enquiry_unit_price" id="enquiry_unit_price" onchange="setTotalPrice()">
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 form-group viewHide">
+                <label class="control-label">
+                    总价/元
+                </label>
+                <input type="text" class="form-control inqueryShow ignore" name="enquiry_total_price" id="enquiry_total_price" readonly="">
+            </div>
+         </div>
+            <div class="clearfix"></div>
+            <p style="color: #57a2ec; font-weight: bold;">运输要求</p>
+            <hr style="border: 1px solid #57a2ec">
+
+            <div class="form-inline">
+                
+                <label class="control-label" style="float: left; margin-right: 20px; line-height: 54px; width: 30px; text-align: right;">
+                <i style="color: #F30202; margin-right: 5px">*</i>
+                从</label>
+
+                <div class="form-group">
+                    <label class="sr-only" for="city1"></label>
+                    <select id="city1" class="form-control select2-basic noErrorMessage select2-hidden-accessible" name="startAddress" tabindex="-1" aria-hidden="true">
+                        <option value=""></option>
+                            
+                    </select><span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 200px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-city1-container"><span class="select2-selection__rendered" id="select2-city1-container"><span class="select2-selection__placeholder">请选择</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="dec">City</label>
+                    <input class="form-control noErrorMessage" id="startAddress1" style="width: 220px;" placeholder="请输入详细地址" name="startAddress1">
+                </div>
+                <div class="form-group" style="margin: 10px 0px;">
+                    
+                    <label class="control-label" style="float: left; margin-right: 10px; line-height: 34px; width: 160px; text-align: right;">
+                        <i style="color: #F30202; margin-right: 5px">*</i>
+                        计划发运时间
+                        </label>
+                    <input class="Wdate form-control noErrorMessage" type="text" id="planStartTime" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'planArriveTime\')}',isShowClear:false,readOnly:true,startDate:'%y-%M-%d 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss'})" style="width: 200px;" name="planStartTime">
+                     
+                </div>
+                <div class="form-group" style="margin: 10px 0px;">
+                    <label class="control-label" style="float: left; margin-right: 10px; line-height: 34px; width: 10px; text-align: right;">~</label>
+                    <input class="Wdate form-control noErrorMessage" type="text" id="planStartEndTime" onclick="WdatePicker({minDate:'#F{$dp.$D(\'planStartTime\')}',isShowClear:false,readOnly:true,startDate:'%y-%M-%d 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss'})" name="planStartEndTime">
+                </div>
+            </div>
+
+            <div class="form-inline">
+                <label class="control-label" style="float: left; margin-right: 20px; line-height: 54px; width: 30px; text-align: right;">
+                <i style="color: #F30202; margin-right: 5px">*</i>
+                到</label>
+                <div class="form-group">
+                    <label class="sr-only" for="city2"></label>
+                    <select id="city2" class="form-control select2-basic noErrorMessage select2-hidden-accessible" name="arriveAddress" tabindex="-1" aria-hidden="true">
+                        <option value=""></option>
+                           
+                    </select><span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 200px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-city2-container"><span class="select2-selection__rendered" id="select2-city2-container"><span class="select2-selection__placeholder">请选择</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="dec1">City</label>
+                    <input class="form-control noErrorMessage" id="arriveAddress1" style="width: 220px;" placeholder="请输入详细地址" name="arriveAddress1">
+                </div>
+                <div class="form-group" style="margin: 10px 0px;">
+                    <label class="control-label" style="float: left; margin-right: 10px; line-height: 34px; width: 160px; text-align: right;">计划运达时间</label>
+                    <input class="Wdate form-control noErrorMessage" type="text" id="planArriveTime" onclick="WdatePicker({minDate:'#F{$dp.$D(\'planStartTime\')}',isShowClear:false,readOnly:true,startDate:'%y-%M-%d 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss'})" style="width: 200px;" name="planArriveTime">
+                </div>
+            </div>
+            <div class="form-group" style="margin: 10px 0px;">
+                <label class="control-label" style="line-height: 34px;"><i style="color: #F30202; margin-right: 5px">*</i>运输方式</label>
+                <label>
+                    <input type="radio" name="mainTransType" id="mainTransType1" value="1" style="width: 20px" checked="checked">
+                    汽运
+                    <input type="radio" name="mainTransType" id="mainTransType2" value="2" style="width: 20px">
+                    船运
+                    <input type="radio" name="mainTransType" id="mainTransType3" value="3" style="width: 20px">
+                    汽船联运
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="carlength" class="control-label text-right" style="float: left;line-height: 34px;width: 60px;text-align: right;">车长</label>
+                <div class="col-sm-10 col-md-10">
+                    <div class="input-group">
+                        <div class="btn-group">
+                            <a class="btn btn-default active" data-toggle="carlength" data-title="不限">不限</a>
+                                    <a class="btn btn-default notActive" data-toggle="carlength" data-title="9.6米">9.6米米</a>
+                                    <a class="btn btn-default notActive" data-toggle="carlength" data-title="10米">10米米</a>
+                                    <a class="btn btn-default notActive" data-toggle="carlength" data-title="12.5米">12.5米米</a>
+                                    <a class="btn btn-default notActive" data-toggle="carlength" data-title="13米">13米米</a>
+                                    
+                            <button type="button" class="btn btn-default viewMore">更多</button>
+                        </div>
+                        <input type="hidden" name="truckLength" id="carlength" value="不限">
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-group">
+                <label for="cartype" class="control-label text-right" style="float: left;line-height: 34px;width: 60px;text-align: right;">车型</label>
+                <div class="col-sm-10 col-md-10">
+                    <div class="input-group">
+                        <div class="btn-group">
+                            <a class="btn btn-default active" data-toggle="cartype" data-title="不限">不限</a>
+                                    <a class="btn btn-default notActive" data-toggle="cartype" data-title="6轴(6*4+3挂半)">6轴(6*4+3挂半)</a>
+                                    <a class="btn btn-default notActive" data-toggle="cartype" data-title="6轴(6*2+3挂半)">6轴(6*2+3挂半)</a>
+                                    <a class="btn btn-default notActive" data-toggle="cartype" data-title="5轴(6*4+2挂半)">5轴(6*4+2挂半)</a>
+                                    <a class="btn btn-default notActive" data-toggle="cartype" data-title="5轴(6*2+2挂半)">5轴(6*2+2挂半)</a>
+                                    <a class="btn btn-default notActive" data-toggle="cartype" data-title="5轴(4*2+3挂半)">5轴(4*2+3挂半)</a>
+                                    <a class="btn btn-default notActive viewHide" data-toggle="cartype" data-title="4轴(4*2+2挂半)">4轴(4*2+2挂半)</a>
+                                    
+                            <button type="button" class="btn btn-default viewMore">更多</button>
+                        </div>
+                        <input type="hidden" name="truckType" id="cartype" value="不限">
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-group">
+                <label for="shiptype" class="control-label text-right" style="float: left;line-height: 34px;width: 60px;text-align: right;">船型</label>
+                <div class="col-sm-10 col-md-10">
+                    <div class="input-group">
+                        <div class="btn-group">
+                            <a class="btn btn-default active" data-toggle="shiptype" data-title="不限">不限</a>
+                                    <a class="btn btn-default notActive" data-toggle="shiptype" data-title="集装箱船">集装箱船</a>
+                                    <a class="btn btn-default notActive" data-toggle="shiptype" data-title="散货船">散货船</a>
+                                    <a class="btn btn-default notActive" data-toggle="shiptype" data-title="滚装船">滚装船</a>
+                        </div>
+                        <input type="hidden" name="boatType" id="shiptype" value="不限">
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            
+            <div class="form-group form-inline">
+                <label class="control-label" style="float: left;margin-right: 10px;line-height: 34px;width: 66px;text-align: right;">补充说明</label>
+                <textarea id="remark" name="remark" class="form-control" style="width: 800px;"></textarea>
+            </div>
+
+            <div class="form-group form-inline">
+                <label class="control-label" style="float: left;margin-right: 10px;line-height: 34px;width: 60px;text-align: right;">附件</label>
+                <input type="file" class="form-control" name="fileTextInfo">
+            </div>
+
+           
+
+            <div class="form" style="margin: 10px 0px; text-align: center;">
+                <button type="button" class="btn btn-primary" style="margin-right: 20px" id="releaseBT" onclick="releaseCheck();">发布</button>
+            </div>
+        </form>
+
+
+            </div>
+     </section>
+    </main>
+
+    <!--========================================================
+                            FOOTER
+    =========================================================-->
+    <!-- <footer>
+        <section class="well">
+            <div class="container">
+                <p class="rights">
+                    Copyright &#169; <span id="copyright-year">2015</span>
+                    CargoCN
+                    <a href="index-5.html">版权所有</a>
+                </p>
+            </div>
+        </section>
+    </footer> -->
+</div>
+<!-- new -->
+<footer class="footer ">
+    <div class="container">
+        <div class="row footer-top">
+
+                 <div class="col-md-8 col-lg-8">
+                     <table border="0" width="100%" frame="void" rules="none" cellspacing="1" cellpadding="1">
+                    <tbody>
+                    <tr style="text-align: center;" valign="top">
+                    <td>
+                    <h5 data-fontsize="13" data-lineheight="14"><strong><span style="color: #e0e0e0;">关于我们</span></strong></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="公司简介" href="./about.html" target="_blank">公司简介</a></span></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="发展历程" href="./about.html#growth" target="_blank">发展历程</a></span></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="管理团队" href="./about.html#team" target="_blank">管理团队</a></span></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="联系我们" href="./about.html#contact" target="_blank">联系我们</a></span></h5>
+
+                    </td>
+                   
+                    <td>
+                    <h5 data-fontsize="13" data-lineheight="14"><strong><span style="color: #e0e0e0;">资源管理</span></strong></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="下载中心" href="./download.html" target="_blank">下载中心</a></span></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="产品中心" href="./product.html" target="_blank">产品中心</a></span></h5>
+                    </td>
+                    <td>
+                    <h5 data-fontsize="13" data-lineheight="14"><strong><span style="color: #e0e0e0;">帮助中心</span></strong></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="个人中心" href="" target="_blank">个人中心</a></span></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="客户服务" href="./service.html" target="_blank">客户服务</a></span></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="服务中心" href="" target="_blank">服务中心</a></span></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="联系我们" href="./about.html#contact" target="_blank">联系我们</a></span></h5>
+
+                    </td>
+
+
+                    </tr>
+                    </tbody>
+                    </table>
+                    
+                  </div>
+                <div class="fusion-clearfix"></div>
+                   <div class="col-md-4 col-lg-4"> <h5 data-fontsize="13" data-lineheight="14"><strong><span style="color: #e0e0e0;">商务合作</span></strong></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="下载中心" href="" target="_blank">服务热线：400-856-5886</a></span></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="文档中心" href="" target="_blank">企业邮箱：Service@Cargocn.com</a></span></h5>
+                    </div>
+             </div>
+
+       <div class="row footer-bottom">
+                    Copyright &#169; <span id="copyright-year">2015</span>
+                    CargoCN,沪ICP备15003385
+                    版权所有
+                    
+                </p>
+        </div>
+    </div>  
+ </footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/tm-scripts.js"></script>
+<!-- </script> -->
+<!--coded by gap0n-->
+
+</body>
+</html>
