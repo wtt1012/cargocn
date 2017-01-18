@@ -21,7 +21,7 @@
    
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script type='text/javascript' src='../vendor/jquery-migrate/jquery-migrate.min.js'></script>
-
+<script type='text/javascript' src='../vendor/jQuery-ajaxTransport-XDomainRequest/jquery.xdomainrequest.min.js'></script>
 <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="../vendor/select2/dist/js/select2.full.min.js"></script>
 <script src="../vendor/select2/dist/js/i18n/zh-CN.js"></script>
@@ -248,12 +248,12 @@ body{
           <form method="POST" action="http://dev2.cargocn.cn/cargocn-cloud-server/login" autocomplete="off">
             <div class="row">
                 <div class="input-icon left" style="margin:15px"> <!-- <i class="fa fa-user"></i> -->
-                    <input style="border:0;" type="text" class="form-control" name="username" id="send_index" placeholder="请输入用户名" required>
+                    <input style="border:0;" type="text" class="form-control" name="username" id="username" placeholder="请输入用户名" required>
                 </div>
             </div>
             <div class="row">
                 <div class="input-icon left" style="margin:15px;"> <!-- <i class="fa fa-unlock-alt"></i> -->
-                    <input style="border:0;" type="password" class="form-control" name="password" id="arrive_index" placeholder="请输入密码" required>
+                    <input style="border:0;" type="password" class="form-control" name="password" id="password" placeholder="请输入密码" required>
                 </div>
             </div>
             <div class="row">
@@ -308,8 +308,33 @@ body{
         </div>
         <script type="text/javascript">
         	/*$("#login_send").submit();*/
+        	var BASE_API_URL = "http://dev2.cargocn.cn/cargocn-cloud-server"
             function ublogin() {
-             $("#login_form form").submit();
+                //$("#login_form form").submit();
+                $.ajax({
+					url: BASE_API_URL+'/appLogin.do',//?username=' + $('#username').val() + '&password='+$('#password').val(),
+					type: 'POST',
+					async: false,
+					dataType: 'JSON',
+					data: {
+						username: $('#username').val(),
+						password: $('#password').val()
+					}
+				})
+				.done(function(back) {
+					//console.log(back);
+					//alert(back);
+					// if (back.status == 'Y') {
+					// 	issubmits=true;
+					// } else {
+					// 	issubmits=false;
+					// 	$('#imgcode').trigger('click');
+					// 	var icon = $('#imgcodeinput').parent('.input-icon').children('i');
+					// 	icon.removeClass('fa-check').addClass("fa-warning");
+					// 	icon.attr("data-original-title", back.msg).tooltip({'container': 'body'});
+					// 	$('#imgcodeinput').closest('.form-group').removeClass("has-success").addClass('has-error');
+					// }
+				});
 			}  
         	/*function getCookie(t) {
 			    for (var e = t + "=", n = document.cookie.split(";"), r = 0; r < n.length; r++) {
@@ -327,10 +352,23 @@ body{
 </div>
 <!-- 注册 -->
 <script type='text/javascript' src='../vendor/forkit/js/forkit.js'></script>
+<script type='text/javascript' src='../vendor/js-cookie/src/js.cookie.js'></script>
 <script type='text/javascript' src='../build/js/production.js'></script>
 <script type='text/javascript' src='../build/js/chengda.js'></script>
 <script type='text/javascript' src='../build/js/cg.js'></script>
 <script>
+
+function initialCookie() {
+	var cargocn_domain = 'localhost:3000';
+	var cargocn_name = 'cargocn_name';
+	var cargocn_value = 'cargocn_value';
+	Cookies.set(cargocn_name,cargocn_value, { path:'/',domain:cargocn_domain});
+	//Cookies.set(cargocn_name,cargocn_value,{path:'/'});
+	//Cookies.set('cargocn_name', 'cargocn_value11');
+	console.log(Cookies.get('cargocn_name'));
+	Cookies.remove('cargocn_name');
+}
+
 var translateToSelect2 = function(flag){
    var iobject = window.cargocnData.zone;
    var arrs = [];
@@ -349,6 +387,9 @@ var translateToSelect2 = function(flag){
 $.fn.select2.defaults.set( "theme", "bootstrap" );
     /*$(function () { $("[data-toggle='tooltip']").tooltip(); });*/
 $(document).ready(function() {
+
+	initialCookie();
+
 	$("#send_index").select2({
 		//tags: true, //是否可以自定义tag
 		language: "zh-CN",
