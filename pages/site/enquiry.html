@@ -469,6 +469,7 @@ $(document).ready(function() {
         if($(this).prop("checked")){
            $(".carshow").show(); 
            $(".shipshow").hide();
+           $(".car_type_box span.item:first-child").addClass('active').siblings('span.item').removeClass('active');
         }
     })
 
@@ -477,6 +478,7 @@ $(document).ready(function() {
         if($(this).prop("checked")){
            $(".carshow").hide(); 
            $(".shipshow").show();
+           $(".car_type_box span.item:first-child").addClass('active').siblings('span.item').removeClass('active');
         }
     })
 
