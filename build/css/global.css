@@ -505,7 +505,7 @@ p {
 }
 
 .side.side-2 img {
-    width: 487px
+    width: 320px
 }
 
 .side.side-3 .item-text .item-h {
@@ -513,7 +513,7 @@ p {
 }
 
 .side.side-3 img {
-    width: 605px
+    width: 301px
 }
 
 .side.side-4 .item-text .item-h {
@@ -521,7 +521,7 @@ p {
 }
 
 .side.side-4 img {
-    width: 477px
+    width: 312px
 }
 
 .side.side-5 .item-text .item-h {
@@ -529,7 +529,7 @@ p {
 }
 
 .side.side-5 img {
-    width: 318px
+    width: 224px
 }
 
 .side.side-6 .crbl-wrap {
@@ -8951,7 +8951,8 @@ body.single {
     }
 
     .side.side-2 img {
-        width: 70%
+         width: 70%
+
     }
 
     .side.side-3 .item-text .item-h {
