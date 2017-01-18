@@ -17,17 +17,24 @@
 <link rel="stylesheet" type="text/css" href="../build/css/contact.css">
 <!-- <link rel="stylesheet" type="text/css" href="../build/css/style.css"> -->
 <link href="../vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
-
+<link href="../vendor/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css">
+<link href="../vendor/select2-bootstrap-theme/dist/select2-bootstrap.min.css" rel="stylesheet" type="text/css">
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 --> 
 <script src="../vendor/jquery/jquery.js"></script>
-   
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-
-<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js'></script>
-
+<script type='text/javascript' src='../vendor/jquery-migrate/jquery-migrate.min.js'></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
+<script src="../vendor/select2/dist/js/select2.full.min.js"></script>
+<script src="../vendor/select2/dist/js/i18n/zh-CN.js"></script>
+<style type="text/css">
+.side.side-2 .item-text.select2Span span{
+   font-size: 14px;
+}
+.select2-container{
+   color:#000;
+}
+</style>
 </head>
 <body class="home blog" data-controller="home">
 <a href="" rel="publisher"></a>
@@ -132,7 +139,7 @@
     <section id="trends" class="side side-2">
 
      <div class="item-wrap" style="background: url(../build/images/pattern.png)">
-        <div class="item-text">
+        <div class="item-text select2Span">
                 <div class="container">
                     <div class="col-ms-12 col-md-6">
                         <div class="picture">
@@ -149,17 +156,20 @@
                                                             <form id="contactForm" method="POST" autocomplete="off">
                                                                 <div class="row">
                                                                     <div class="input-icon left" style="margin:15px"> <!-- <i class="fa fa-user"></i> -->
-                                                                        <input style="border:0;" type="text" data-msg-required="装货地址" class="form-control" name="send_index" id="send_index" placeholder="请选择装货地址" required readonly>
+                                                                       <!--  <input style="border:0;" type="text" data-msg-required="装货地址" class="form-control" name="send_index" id="send_index" placeholder="请选择装货地址" required readonly> -->
+                                                                      <select class="select2" name="send_index" id="send_index"></select>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="input-icon left" style="margin:15px;"> <!-- <i class="fa fa-unlock-alt"></i> -->
-                                                                        <input style="border:0;" type="text" data-msg-required="卸货地址" class="form-control" name="arrive_index" id="arrive_index" placeholder="请选择卸货地址" required readonly>
+                                                                        <!-- <input style="border:0;" type="text" data-msg-required="卸货地址" class="form-control" name="arrive_index" id="arrive_index" placeholder="请选择卸货地址" required readonly> -->
+                                                                        <select class="select2" name="arrive_index" id="arrive_index"></select>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-md-12" style="margin-top:22px;">
-                                                                        <input id="index_send" type="submit" value="在线询价" class="btn btn-primary btn-lg btn-block" data-loading-text="在线询价" style="border-radius: 4px">
+                                                                        <!-- <input id="index_send" type="button" value="在线询价" class="btn btn-primary btn-lg btn-block" data-loading-text="在线询价" style="border-radius: 4px"> -->
+                                                                        <a href="../pages/site/enquiry.html" type="button" class="btn btn-primary btn-lg btn-block" style="color:#fff;">在线询价</a>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row" style="font-size:12px">
@@ -205,7 +215,12 @@
      <section id="style" class="side side-5">
          <div class="item-wrap" style="background: url(../build/images/pattern.png)">
     <div class="item-text">
-    <div class="text animated">tuning new<br><span class="black">Trends</span></div>
+    <div class="text animated">
+       金融<br>
+       <span class="black"><!-- 平台优质客户，优享低息小额贷款、应收帐款质押融资、应收账款池融资、国内保理等服务，让您资金畅通无阻。
+           资金流转、信誉评级双闭环，降低信贷风险。 -->
+        </span>
+    </div>
     <div class="picture">
     <img class="pic animated" src="../build/images/4.png" alt="Web Design Agency" width="224" height="451">
     </div>
@@ -352,10 +367,73 @@
   </div>
 </div>
 <script type='text/javascript' src='../vendor/forkit/js/forkit.js'></script>
+<script type='text/javascript' src='../vendor/js-cookie/src/js.cookie.js'></script>
 <script type='text/javascript' src='../build/js/production.js'></script>
+<script type='text/javascript' src='../build/js/chengda.js'></script>
+<script type='text/javascript' src='../build/js/cg.js'></script>
 <!-- <script>
     $(function () { $("[data-toggle='tooltip']").tooltip(); });
 </script> -->
+<script>
 
+function initialCookie() {
+    var cargocn_domain = 'localhost:3000';
+    var cargocn_name = 'cargocn_name';
+    var cargocn_value = 'cargocn_value';
+    Cookies.set(cargocn_name,cargocn_value, { path:'/',domain:cargocn_domain});
+    //Cookies.set(cargocn_name,cargocn_value,{path:'/'});
+    //Cookies.set('cargocn_name', 'cargocn_value11');
+    console.log(Cookies.get('cargocn_name'));
+    Cookies.remove('cargocn_name');
+}
+
+var translateToSelect2 = function(flag){
+   var iobject = window.cargocnData.zone;
+   var arrs = [];
+   if(flag==0){
+     arrs.push({"id":0, "text":"请选择发货地址"});
+   }else{
+     arrs.push({"id":0, "text":"请选择到达地址"});
+   }
+   
+   for(var i=0;i<iobject.length;i++){
+      arrs.push({"id": iobject[i].codeId, "text":iobject[i].codeName});
+   }
+   return arrs;
+}
+
+$.fn.select2.defaults.set( "theme", "bootstrap" );
+    /*$(function () { $("[data-toggle='tooltip']").tooltip(); });*/
+$(document).ready(function() {
+
+    initialCookie();
+
+    $("#send_index").select2({
+        //tags: true, //是否可以自定义tag
+        language: "zh-CN",
+        theme:'bootstrap',
+        width:'100%',
+        data:translateToSelect2(0)
+    });
+    $("#arrive_index").select2({
+        language: "zh-CN",
+        theme:'bootstrap',
+        width:'100%',
+        data:translateToSelect2(1)
+    });
+
+
+    // $(".select2-basic").select2({
+    //      language:'zh-CN',
+    //      width:'100%',
+    //      theme:'bootstrap',
+    //      placeholder: '请选择',
+    //      allowClear:true
+    //      // tags: true,
+    //      // templateResult: formatState,
+    //      // templateSelection: formatState
+    // })
+})
+</script>
 </body>
 </html>
