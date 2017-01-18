@@ -295,7 +295,7 @@ gulp.task('browserSync', function() {
     browserSync.init({
         server: {
             baseDir: './',
-            index:"/pages/demo.html"
+            index:"/pages/index.html"
         }
     })
 })

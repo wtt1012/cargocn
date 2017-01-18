@@ -26,6 +26,9 @@
     "font-awesome": "fontawesome#^4.7.0",
     "bootstrap-social": "^5.1.1",
     "jquery-migrate": "1.4.0",
-    "autosize": "^3.0.20"
+    "autosize": "^3.0.20",
+    "select2": "^4.0.3",
+    "select2-bootstrap-theme": "^0.1.0-beta.9",
+    "social-share.js": "^1.0.2"
   }
 }
