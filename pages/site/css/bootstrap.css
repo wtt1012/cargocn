@@ -6656,7 +6656,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a:focus {
   /* color: #d3d1c8; */
-  color:#54A9FE;
+  // color:#54A9FE;
 }
 .navbar-default .navbar-nav > li > a:focus:after {
   width: 100%;
@@ -6676,7 +6676,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .sfHover > a:focus {
   /* color: #e74e3e; */
-  color:#54A9FE;
+  // color:#54A9FE;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a:after,
