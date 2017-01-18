@@ -22421,17 +22421,44 @@ BD = {
                 });
             });*/
             $("#trends").find('img.pic').animateOnScroll({
-                scrollDownEffect: 'flipInX'
+                scrollDownEffect: 'fadeInLeftBig'
             });
             $("#identity").find('img.pic').animateOnScroll({
                 scrollDownEffect: 'rubberBand'
             });
             $("#personal").find('img.pic').animateOnScroll({
-                scrollDownEffect: 'rollIn'
+                scrollDownEffect: 'fadeInLeftBig'
             });
             $("#style").find('img.pic').animateOnScroll({
                 scrollDownEffect: 'zoomInDown'
             });
+            
+            $("#trends").find('div.text').animateOnScroll({
+                scrollDownEffect: 'fadeInLeftBig'
+            });
+            $("#identity").find('div.text').animateOnScroll({
+                scrollDownEffect: 'fadeInRight'
+            });
+            $("#personal").find('div.text').animateOnScroll({
+                scrollDownEffect: 'fadeInLeftBig'
+            });
+            $("#style").find('div.text').animateOnScroll({
+                scrollDownEffect: 'fadeInRight'
+            });
+            
+            $("#trends").find('.table').animateOnScroll({
+                scrollDownEffect: 'fadeInRight'
+            });
+            // $("#identity").find('.picture.box-content').animateOnScroll({
+            //     scrollDownEffect: 'rubberBand'
+            // });
+            // $("#personal").find('.picture.box-content').animateOnScroll({
+            //     scrollDownEffect: 'rollIn'
+            // });
+            // $("#style").find('.picture.box-content').animateOnScroll({
+            //     scrollDownEffect: 'fadeInRight'
+            // });
+
             $(document).on("scroll", onScroll);
             function onScroll(event) {
                 var scrollPos = $(document).scrollTop()
