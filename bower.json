@@ -29,6 +29,7 @@
     "autosize": "^3.0.20",
     "select2": "^4.0.3",
     "select2-bootstrap-theme": "^0.1.0-beta.9",
-    "social-share.js": "^1.0.2"
+    "social-share.js": "^1.0.2",
+    "js-cookie": "^2.1.3"
   }
 }
