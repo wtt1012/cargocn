@@ -6652,7 +6652,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a:after {
   /* background: #e74e3e; */
-  background:#54A9FE;
+  background: #f1c40f;
 }
 .navbar-default .navbar-nav > li > a:focus {
   /* color: #d3d1c8; */
@@ -6663,7 +6663,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a:hover {
  /* color: #e74e3e; */
-  color:#54A9FE;
+  // color:#54A9FE;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > li > a:hover:after {

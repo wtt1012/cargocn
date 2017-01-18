@@ -1,0 +1,56 @@
+
+/* Main style */
+.navigation:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.navigation li {
+  font: 15px/47px Microsoft YaHei;
+  list-style: none;
+  margin: 1em;
+    -moz-text-shadow: 1px 1px 1px #000;
+  -webkit-text-shadow: 1px 1px 1px #000;
+  text-shadow: 1px 1px 1px #000;
+}
+.navigation li a {
+  display: block;
+  border-radius: 0.33333333em;
+  position: relative;
+  text-align: center;
+  border: 0.08333333em solid #2baca7;
+  overflow: hidden;
+  z-index: 1;
+}
+.navigation li a i {
+  display: block;
+  position: absolute;
+  font-size: 1.66666667em;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+  -webkit-transition: all 0.5s ease;
+}
+.navigation li a span {
+  width: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  opacity: 0;
+  font-size: 1em;
+  text-transform: uppercase;
+  -webkit-transition: all 0.25s 0.125s ease;
+}
+
+.navigation li a:hover.to.right i {
+  -webkit-transform: translate(5em, -50%);
+}
+.navigation li a:hover i {
+  -webkit-transform: translate(-50%, 5em);
+  color: rgba(255, 255, 255, 0.4);
+}
+.navigation li a:hover span {
+  opacity: 1;
+}
