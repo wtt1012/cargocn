@@ -1,0 +1,70 @@
+<div class="portlet-body form">
+    <form action="#" id="logins_form" class="form-horizontal" novalidate="novalidate">
+        <div class="form-body">
+            <div class="form-group">
+                <label class="control-label col-md-3">手机号 <span class="required" aria-required="true">
+                * </span>
+                </label>
+                <div class="col-md-8">
+                    <div class="input-icon right">
+                        <i class="fa"></i>
+                        <input type="text" class="form-control" name="phone" id="phone" placeholder="请输入手机号">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">密码 <span class="required" aria-required="true">
+                * </span>
+                </label>
+                <div class="col-md-8">
+                    <div class="input-icon right">
+                        <i class="fa"></i>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="请输入密码">
+                    </div>
+                </div>
+            </div>
+			
+			<div class="form-group" id="imgcodecont" style="display:none;">
+                <label class="control-label col-md-3" style="padding-right: 0px;">图形验证码 <span class="required" aria-required="true">
+                * </span>
+                </label>
+                <div class="col-md-4">
+                    <div class="input-icon right">
+                        <i class="fa"></i>
+                        <input type="text" class="form-control" name="imgcodeinput" id="imgcodeinput" placeholder="图形验证码">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="http://pc.fuyoukache.com/common/imageCode?img=0.661217046192214" alt="点击获取" id="imgcode">
+                </div>
+            </div>
+			
+            <div class="form-group">
+                <label class="control-label col-md-3">
+                </label>
+                <div class="col-md-8">
+                    <div class="checkbox-list">
+                        <label>
+                        <input type="checkbox" value="1" name="service" id="remember_login"> 自动登录</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="form-group text-danger" id="alert_box" style="display:none;font-size:12px;text-align:center;margin-bottom:0px;">
+			<span class="col-md-12"></span>
+		</div>
+        <div class="form-group" style="margin-bottom:2px;">
+            <div class="form-actions fluid">
+                <div class="col-md-offset-2 col-md-8">
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">登 录</button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-8 text-right">
+                <a href="reset-password.html" target="_blank">找回密码</a>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- <script src="js/login.js"></script> -->
