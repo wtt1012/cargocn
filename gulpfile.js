@@ -294,6 +294,8 @@ gulp.task('watchcopy', function () {
 gulp.task('browserSync', function() {
     browserSync.init({
         server: {
+            port:8080,
+            //host:'gulp.dev',
             baseDir: './',
             index:"/pages/index.html"
         }

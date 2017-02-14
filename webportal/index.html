@@ -20,10 +20,12 @@
 <link href="../vendor/select2-bootstrap-theme/dist/select2-bootstrap.min.css" rel="stylesheet" type="text/css">
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 --> 
-<script src="../vendor/jquery/jquery.js"></script>
+<script type='text/javascript' src="../vendor/jquery/jquery.min.js"></script>
 <script type='text/javascript' src='../vendor/jquery-migrate/jquery-migrate.min.js'></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="build/js/heads.js"></script>
+<script src="build/js/maxZindex.js"></script>
 <script src="../vendor/select2/dist/js/select2.full.min.js"></script>
 <script src="../vendor/select2/dist/js/i18n/zh-CN.js"></script>
 <style type="text/css">
@@ -32,6 +34,24 @@
 }
 .select2-container{
    color:#000;
+}
+.modal{
+   color: #000;
+}
+.input-icon.right > i {
+    right: 8px;
+    float: right;
+}
+.input-icon > i {
+    color: #ccc;
+    display: block;
+    position: absolute;
+    margin: 11px 2px 4px 10px;
+    z-index: 3;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    text-align: center;
 }
 </style>
 </head>
@@ -45,44 +65,26 @@
             <nav id="nav" class="main-navigation" role="navigation">
                 <ul id="menu-main" class="menu">
                     <li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="">首页</a></li>
-                    <!-- <li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-35"><a a href="https://bigdropinc.com/services/design/">在线询价</a>
-                    <ul class="sub-menu">
-                        <li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="https://bigdropinc.com/services/design/">Design</a></li>
-                        <li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="https://bigdropinc.com/services/branding/">Branding</a></li>
-                        <li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="https://bigdropinc.com/services/marketing/">Marketing</a></li>
-                        <li id="menu-item-65" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a href="https://bigdropinc.com/services/animated-videos/">Animated Videos</a></li>
-                    </ul>
-                    </li> -->
                      <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="enquiry.html">在线询价</a></li>
-
-<!--                     <li id="menu-item-368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-368"><a href="">我的运单</a></li> -->
-                    <!-- <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="">个人中心</a></li> -->
                     <li id="menu-item-846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-846"><a href="about.html#contact">联系我们</a></li>
 
                      <li class="mega-menu-item mega-menu-signin signin logged" id="headerAccount">
-                            <!-- <a href="login.html" style="font-size:14px;">
+                            <a href="login.html" style="font-size:17px;">
                                 <i class="fa fa-sign-in"></i> 登录
-                            </a> -->
-                            <a href="" class="button-login1" data-toggle="modal" data-target="#myModal">登录</a>
-                    
+                            </a>
+                        <!-- <a href="" class="button-login1" data-toggle="modal" data-target="#myModal">登录</a> -->
                     </li>
                     <li class="mega-menu-item mega-menu-signin signin logged" id="logout">
-                        <!-- <a href="login.html" style="font-size:14px;">
+                        <a href="login.html" style="font-size:17px;">
                             <i class="fa fa-sign-out"></i> 注册登出
-                        </a> -->
-                        <a href="" class="button-register1" data-toggle="modal" data-target="#Modal">注册中心</a>
+                        </a>
+                        <!-- <a href="" class="button-register1" data-toggle="modal" data-target="#Modal">注册中心</a> -->
                     </li>
-
-                    <!-- <a href="" class="button-login" data-toggle="modal" data-target="#myModal">登录</a>
-                    <a href="" class="button-register" data-toggle="modal" data-target="#Modal">注册中心</a> -->
-
                     <li id="nav-right" style="margin-right:100px;" class="nav-right"><i class="glyphicon glyphicon-earphone fa-lg"></i>400-856-5886</li>
                 </ul>
                  <span id="m-nav-close" class="fa">&#xf057;</span>
             </nav> 
-             
-           <a class="forkit" data-text="Cargocn.com" data-text-detached="Cargocn.com >"></a>
-          
+            <a class="forkit" data-text="Cargocn.com" data-text-detached="Cargocn.com >"></a>
             <a id="m-nav" href="#"><span class="fa">&#xf039;</span></a>
             <div class="clear"></div>
             </div>
@@ -140,17 +142,8 @@
                       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> <span class="sr-only">Next</span> </a> 
             </div>
         </div>
-
-        <!-- <div class="wrap"> 
-        
-            <a href="" class="button-login" data-toggle="modal" data-target="#myModal">登录</a>
-            <a href="" class="button-register" data-toggle="modal" data-target="#Modal">注册中心</a>
-        
-        </div> -->
-
-         <a id="subnav" href="#trends" class="trigger"><img src="../build/images/scroll1.png" alt="scroll"/></a>
+        <a id="subnav" href="#trends" class="trigger"><img src="../build/images/scroll1.png" alt="scroll"/></a>
     </section>
- 
     
     <section id="trends" class="side side-2">
 
@@ -247,137 +240,151 @@
 
     </div> 
 </div> 
-
-
+<div class="modal fade" id="pop_login_out" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:450px;">
+        <div class="modal-content">
+            <div class="modal-body" style="padding:0;">
+                <div class="tabs" style="margin:0;">
+                    <ul class="nav nav-tabs nav-justified" id="login_out_box">
+                        <li class="active">
+                            <a href="login.html" class="text-center"> <i class="fa fa-sign-in"></i>
+                                登录
+                            </a>
+                        </li>
+                       <!--  <li>
+                           <a href="register.html" class="text-center"> <i class="fa fa-user-plus"></i>
+                               申请加入
+                           </a>
+                       </li> -->
+                    </ul>
+                    <div class="tab-content" style="padding: 50px 15px 10px 15px;">
+                        <div id="popular10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <footer class="footer ">
     <div class="container">
         <div class="row footer-top">
-
-                 <div class="col-md-8 col-lg-8">
-                     <table border="0" width="100%" frame="void" rules="none" cellspacing="1" cellpadding="1">
+            <div class="col-md-8 col-lg-8">
+                <table border="0" width="100%" frame="void" rules="none" cellspacing="1" cellpadding="1">
                     <tbody>
-                    <tr style="text-align: center;" valign="top">
-                    <td>
-                    <h5 data-fontsize="13" data-lineheight="14"><strong><span style="color: #e0e0e0;">关于我们</span></strong></h5>
-                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="公司简介" href="about.html" target="_blank">公司简介</a></span></h5>
-                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="发展历程" href="about.html#growth" target="_blank">发展历程</a></span></h5>
-                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="管理团队" href="about.html#team" target="_blank">管理团队</a></span></h5>
-                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="联系我们" href="about.html#contact" target="_blank">联系我们</a></span></h5>
+                        <tr style="text-align: center;" valign="top">
+                        <td>
+                        <h5 data-fontsize="13" data-lineheight="14"><strong><span style="color: #e0e0e0;">关于我们</span></strong></h5>
+                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="公司简介" href="about.html" target="_blank">公司简介</a></span></h5>
+                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="发展历程" href="about.html#growth" target="_blank">发展历程</a></span></h5>
+                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="管理团队" href="about.html#team" target="_blank">管理团队</a></span></h5>
+                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="联系我们" href="about.html#contact" target="_blank">联系我们</a></span></h5>
 
-                    </td>
-                   
-                    <td>
-                    <h5 data-fontsize="13" data-lineheight="14"><strong><span style="color: #e0e0e0;">资源管理</span></strong></h5>
-                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="下载中心" href="download.html" target="_blank">下载中心</a></span></h5>
-                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="产品中心" href="product.html" target="_blank">产品中心</a></span></h5>
-                    </td>
-                    <td>
-                    <h5 data-fontsize="13" data-lineheight="14"><strong><span style="color: #e0e0e0;">帮助中心</span></strong></h5>
-                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="个人中心" href="" target="_blank">个人中心</a></span></h5>
-                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="客户服务" href="service.html" target="_blank">客户服务</a></span></h5>
-                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="联系我们" href="about.html#contact" target="_blank">联系我们</a></span></h5>
-
-                    </td>
-
-
-                    </tr>
+                        </td>
+                       
+                        <td>
+                        <h5 data-fontsize="13" data-lineheight="14"><strong><span style="color: #e0e0e0;">资源管理</span></strong></h5>
+                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="下载中心" href="download.html" target="_blank">下载中心</a></span></h5>
+                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="产品中心" href="product.html" target="_blank">产品中心</a></span></h5>
+                        </td>
+                        <td>
+                        <h5 data-fontsize="13" data-lineheight="14"><strong><span style="color: #e0e0e0;">帮助中心</span></strong></h5>
+                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="个人中心" href="" target="_blank">个人中心</a></span></h5>
+                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="客户服务" href="service.html" target="_blank">客户服务</a></span></h5>
+                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="联系我们" href="about.html#contact" target="_blank">联系我们</a></span></h5>
+                        </td>
+                        </tr>
                     </tbody>
-                    </table>
-                    
-                  </div>
-                <div class="fusion-clearfix"></div>
+                </table>
+            </div>
+            <div class="fusion-clearfix"></div>
                    <div class="col-md-4 col-lg-4"> <h5 data-fontsize="13" data-lineheight="14"><strong><span style="color: #e0e0e0;">商务合作</span></strong></h5>
                     <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="下载中心" href="" target="_blank">服务热线：400-856-5886</a></span></h5>
                     <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="文档中心" href="" target="_blank">企业邮箱：Service@Cargocn.com</a></span></h5>
                     </div>
              </div>
 
-       <div class="row footer-bottom">
-                    Copyright &#169; <span>2015</span>
-                    CargoCN,沪ICP备15003385
-                    版权所有
-                    
-                </p>
+        <div class="row footer-bottom">
+            Copyright &#169; <span>2015</span>
+            CargoCN,沪ICP备15003385
+            版权所有
         </div>
     </div>  
  </footer>
+
 <!-- 登录 -->
- <div class="animated bounceIn modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="animated bounceIn modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content" style="margin-top:250px;background: rgba(83, 82, 82, 0.38);">
       <div class="modal-body">
           <form id="contactForm" method="POST" autocomplete="off">
-                                                                <div class="row">
-                                                                    <div class="input-icon left" style="margin:15px"> <!-- <i class="fa fa-user"></i> -->
-                                                                        <input style="border:0;" type="text" class="form-control" name="userName" id="send_index" placeholder="请输入用户名" required>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="input-icon left" style="margin:15px;"> <!-- <i class="fa fa-unlock-alt"></i> -->
-                                                                        <input style="border:0;" type="text" class="form-control" name="passworder" id="arrive_index" placeholder="请输入密码" required>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-md-12" style="margin-top:22px;">
-                                                                        <input id="index_send" type="submit" value="登录" class="btn btn-primary btn-lg btn-block" data-loading-text="登录" style="border-radius: 4px">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row" style="font-size:12px">
-                                                                    <div class="form-group" style="margin-top:15px">
-                                                                        <div class="col-md-12 text-center" id="banner_send_info" style="color:#fff;">
-                                                                          没有账号？ <a href="" title="免费注册" style="color:#fff;">免费注册</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
+            <div class="row">
+                <div class="input-icon left" style="margin:15px"> <!-- <i class="fa fa-user"></i> -->
+                    <input style="border:0;" type="text" class="form-control" name="userName" id="send_index" placeholder="请输入用户名" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-icon left" style="margin:15px;"> <!-- <i class="fa fa-unlock-alt"></i> -->
+                    <input style="border:0;" type="text" class="form-control" name="passworder" id="arrive_index" placeholder="请输入密码" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="margin-top:22px;">
+                    <input id="index_send" type="submit" value="登录" class="btn btn-primary btn-lg btn-block" data-loading-text="登录" style="border-radius: 4px">
+                </div>
+            </div>
+            <div class="row" style="font-size:12px">
+                <div class="form-group" style="margin-top:15px">
+                    <div class="col-md-12 text-center" id="banner_send_info" style="color:#fff;">
+                      没有账号？ <a href="" title="免费注册" style="color:#fff;">免费注册</a>
+                    </div>
+                </div>
+            </div>
+        </form>
       </div>
       
     </div>
   </div>
 </div>
-
-<!-- 注册 -->
- <div class="animated bounceIn modal fade" id="Modal" tabindex="-1" role="dialog" aria-hidden="true">
+ <!-- 注册 -->
+<div class="animated bounceIn modal fade" id="Modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-md">
     <div class="modal-content" style="margin-top:250px;background: rgba(83, 82, 82, 0.38);">
-      <div class="modal-body">
-          <form id="contactForm" class="form-horizontal" method="POST" autocomplete="off">
-                                                               
-                                                                <div class="form-group" style="margin-top:22px;">
-                                                                    <label class="control-label col-md-3" for="">手机号码</label>
-                                                                    <div class="col-md-6">
-                                                                          <input class="form-control" name="companyname" type="text" value="">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label class="control-label col-md-3">手机验证码
-                                                                    </label>
-                                                                    <div class="col-md-4">
-                                                                        <div class="input-icon right">
-                                                                    
-                                                                            <input type="text" class="form-control" name="checkcode" id="checkcode" placeholder="手机验证码" disabled="">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <input type="button" class="btn btn-primary btn-block" name="activecode" id="message_code" value="获取短信验证码" disabled="">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label class="control-label col-md-3" for="">密码</label>
-                                                                    <div class="col-md-6">
-                                                                          <input class="form-control" name="companyname" type="text" value="">
-                                                                    </div>
-                                                                </div>
-                                                            <div class="row">
-                                                              <div class="form-group col-md-12">
-                                                                <div class="col-md-offset-3 col-md-6">
-                                                                  <button type="submit" class="btn btn-primary">提交</button>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                            </form>
-      </div>
-      
+        <div class="modal-body">
+            <form id="contactForm" class="form-horizontal" method="POST" autocomplete="off">                                           
+                <div class="form-group" style="margin-top:22px;">
+                    <label class="control-label col-md-3" for="">手机号码</label>
+                    <div class="col-md-6">
+                          <input class="form-control" name="companyname" type="text" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3">手机验证码
+                    </label>
+                    <div class="col-md-4">
+                        <div class="input-icon right">
+                    
+                            <input type="text" class="form-control" name="checkcode" id="checkcode" placeholder="手机验证码" disabled="">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="button" class="btn btn-primary btn-block" name="activecode" id="message_code" value="获取短信验证码" disabled="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3" for="">密码</label>
+                    <div class="col-md-6">
+                          <input class="form-control" name="companyname" type="text" value="">
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-12">
+                    <div class="col-md-offset-3 col-md-6">
+                      <button type="submit" class="btn btn-primary">提交</button>
+                    </div>
+                  </div>
+                </div>
+            </form>
+        </div>
     </div>
   </div>
 </div>
@@ -385,7 +392,7 @@
 <script type='text/javascript' src='../vendor/js-cookie/src/js.cookie.js'></script>
 <script type='text/javascript' src='../build/js/production.js'></script>
 <script type='text/javascript' src='../build/js/chengda.js'></script>
-<script type='text/javascript' src='../build/js/cg.js'></script>
+<script type='text/javascript' src='../build/js/cg.js'></script> 
 <!-- <script>
     $(function () { $("[data-toggle='tooltip']").tooltip(); });
 </script> -->
@@ -398,7 +405,7 @@ function initialCookie() {
     Cookies.set(cargocn_name,cargocn_value, { path:'/',domain:cargocn_domain});
     //Cookies.set(cargocn_name,cargocn_value,{path:'/'});
     //Cookies.set('cargocn_name', 'cargocn_value11');
-    console.log(Cookies.get('cargocn_name'));
+    //console.log(Cookies.get('cargocn_name'));
     Cookies.remove('cargocn_name');
 }
 
@@ -423,6 +430,8 @@ $(document).ready(function() {
 
     initialCookie();
 
+    //findMaxZIndex('body');
+
     $("#send_index").select2({
         //tags: true, //是否可以自定义tag
         language: "zh-CN",
@@ -437,7 +446,24 @@ $(document).ready(function() {
         data:translateToSelect2(1)
     });
 
-
+    $("#headerAccount a").on("click", function(a) {
+        //a.preventDefault(),
+        //"user.html" == $(this).attr("href") || "user.html?target=user_data.html" == $(this).attr("href") ? window.location.href = $(this).attr("href") : ($("#pop_login_out").modal("toggle"),
+        $("#pop_login_out").modal("toggle");
+        $("#login_out_box a").eq(0).trigger("click");
+    })
+    $("#login_out_box").off("click").on("click", "a", function(a) {
+        a.preventDefault();
+        var i = this;
+        $.ajax({
+            url: $(this).attr("href"),
+            type: "GET",
+            dataType: "html"
+        }).done(function(e) {
+            $("#popular10").html(e);
+            //$(i).parent("li").addClass("active").siblings().removeClass("active")
+        })
+    })
     // $(".select2-basic").select2({
     //      language:'zh-CN',
     //      width:'100%',

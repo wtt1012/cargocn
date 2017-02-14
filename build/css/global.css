@@ -6736,7 +6736,7 @@ body {
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 9999;
+    z-index: 6;/* 9999; */
     -webkit-transition: all .3s linear;
     transition: all .3s linear
 }
