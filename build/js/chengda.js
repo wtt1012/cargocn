@@ -1,10 +1,10 @@
-var CHENGDA = {};
+/*var CHENGDA = {};
 CHENGDA.www = {};
 CHENGDA.www.userData = {};
 
 CHENGDA.www.FYCKWWWINIT = function(d) {
 
-}
+}*/
 
 CHENGDA.www.index = function() {
 
@@ -13,7 +13,7 @@ CHENGDA.www.index = function() {
 CHENGDA.www.index.prototype.init = function() {
 
 }
-$(function(){
+/*$(function(){
 	$('#headerAccount a').on('click', function(event) {
 	    event.preventDefault();
 	    debugger;
@@ -40,4 +40,4 @@ $(function(){
 	    //     //$('#login_out_box a').eq(0).trigger('click');
 	    // }
 	})
-})
+})*/

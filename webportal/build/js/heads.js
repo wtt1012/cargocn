@@ -562,10 +562,10 @@ String.prototype.sub = function(t) {
     } 
 })(jQuery);
 
-FYKC = {},
-FYKC.www = {},
-FYKC.www.userData = {},
-FYKC.www.FYCKWWWINIT = function(d) {
+CHENGDA = {},
+CHENGDA.www = {},
+CHENGDA.www.userData = {},
+CHENGDA.www.CHENGDAWWWINIT = function(d) {
     var g = function(a) {
 
         switch (a) {

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>cargocn客户报价</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta name="format-detection" content="telephone=no"> 
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/mui.picker.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<section class="mainBox">
+	<div class="main">
+		<form action="#" method="post" id="form1">
+			<div class="warp swiper-container">
+				<div class="issue swiper-wrapper " id="issue">
+					<div class="cnt swiper-slide swiper-slide-visible swiper-slide-active artist">
+				 		<ul class="list">
+				 			<li><div class="inp1"><label>客户名称：</label><input type="text" class="artname cname"> *</div></li>
+				 			<li><div class="inp1"><label>货物名称：</label><input type="text" class="artname cname"> *</div></li>
+				 			<li><div class="inp1"><label>吨位：</label><input type="text" class="artname cweight"> 吨*</div></li>
+				 			<li><div class="inp1"><label>装货地址：</label><input type="text" class="artname cname"> *</div></li>
+				 			<li><div class="inp1"><label>卸货地址：</label><input type="text" class="artname cname"> *</div></li>
+				 			<li><div class="inp1"><label>是否含税：</label><div class="in"><button id='showUserPicker' class="mui-btn mui-btn-block csex btn-black" type='button'>请选择...</button></div> *</div></li>
+				 			<li><div class="inp1"><label>运费价格：</label><input type="text" class="artname cweight"> 元/吨*</div></li>
+				 			<li><div class="inp1"><label>装车费：</label><input type="text" class="artname cname"> *</div></li>
+				 			<li><div class="inp1"><label>卸车费：</label><input type="text" class="artname cname"> *</div></li>
+				 			<li><div class="inp1"><label>联系人：</label><input type="text" class="artname ctel"> *</div></li>
+				 			<li><div class="inp1"><label>手机：</label><input type="text" class="artname ctel"> *</div></li>
+				 			<li><div class="inp1"><label>免责条款：</label><input type="text" class="artname ctel"> *</div></li>
+				 		</ul>
+				 		<div class="tcenter mb10">
+				 			<a href="javascript:void(0);" class="create-com">保存</a>
+				 		</div>
+					</div>		
+				</div>
+			</div>
+		</form>
+    </div>
+	<!-- <nav class="mui-bar mui-bar-tab menu">
+		<a class="mui-tab-item mui-active" href="#tabbar">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-chat">
+			<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+			<span class="mui-tab-label">发通告</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-contact">
+			<span class="mui-icon mui-icon-star"></span>
+			<span class="mui-tab-label">艺人</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-map">
+			<span class="mui-icon mui-icon-contact"></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+	</nav> -->
+</section>
+<!-- <div class="mask"></div>
+<div class="popbox" style="display:none;">
+	<span class="close-btn"></span>
+	<p class="role-tile">角色</p>
+	<div class="role-a" style="text-align:left;">
+		<div class="t1"></div>
+		<div class="t2"></div>
+		<div class="t3"></div>
+	</div>
+	<div class="inp1"><label>自定义：</label><input type="text" class="ourset"></div>
+	<div class="inp1 h-price">
+		<label>价格：</label>
+		<input type="number" class="yen" placeholder="100">元&nbsp;/<select class="mui-btn mui-btn-block ptype">
+					<option value="item-1">场</option>
+					<option value="item-2">首</option>
+					<option value="item-3">小时</option>
+					<option value="item-4">天</option>
+				</select><input type="text" class="ptype" placeholder="场、小时、天">
+	</div>
+	<div class="t-center"><a href="javascript:void(0);" class="create-btn">保存</a></div>
+</div> -->
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script src="js/mui.picker.min.js"></script>
+<script src="js/dateX.js"></script>
+<script src="js/city.data-3.js"></script> 
+<script src="js/roleList.js"></script>
+<script src="js/common.js"></script>
+<script src="js/upload.js"></script>
+<script>
+  var result = "";
+  $("#testmm").localResizeIMG({
+    //width: 600,
+    quality: 0.8,
+    maxsize: 5000000, //5M
+    init: function() {
+      popupDiv("pop_div");
+    },
+
+    before: function(that, blob) {
+      $("#img").attr("src", blob).show();
+      if (blob) {
+        $("#error").css("color", "#5A7505").html("").show();
+        //$(".fileinput-button").find("span").html("重新选择文件")
+        console.log(g); // 文件名称
+      } else {
+        $("#error").css("color", "#5A7505").html("加载失败").show();
+        $(".fileinput-button").find("span").html("重新选择文件")
+      }
+      hideDiv("pop_div");
+      $(".imgview").removeClass("adDWXBgIMG")
+    },
+    success: function(result) {
+      var imagedata = encodeURIComponent(result.clearBase64);
+      var data = {
+        imagename: "myImage.png",
+        imagedata: imagedata
+      }
+    }
+  });
+  function popupDiv(div_id) {
+    var div_obj = $("#" + div_id);
+    $(".shadow-bg").show();
+    div_obj.show()
+  }
+  function hideDiv(div_id) {
+    $(".shadow-bg").animate({
+      opacity: "hide"
+    },
+    600);
+    $("#" + div_id).animate({
+      opacity: "hide"
+    },
+    600);
+    return false
+  };
+  
+</script>
+
+<script>
+(function($, doc) {
+	$.init();
+	$.ready(function() {
+
+		var userPicker = new $.PopPicker();
+		userPicker.setData([{
+			value: '1',
+			text: '含税'
+		}, {
+			value: '2',
+			text: '不含税'
+		}]);
+		var showUserPickerButton = doc.getElementById('showUserPicker');
+		showUserPickerButton.addEventListener('tap', function(event) {
+			userPicker.show(function(items) {
+				showUserPickerButton.innerText = JSON.stringify(items[0]["text"]).replace(/\"/g, "");
+				//返回 false 可以阻止选择框的关闭
+				//return false;
+			});
+		}, false);
+
+		var cityPicker3 = new $.PopPicker({
+			layer: 3
+		});
+		cityPicker3.setData(cityData3);
+		var showCityPickerButton = doc.getElementById('showCityPicker');
+		showCityPickerButton.addEventListener('tap', function(event) {
+			cityPicker3.show(function(items) {
+				showCityPickerButton.innerText = (items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+			});
+		}, false);
+	});
+})(mui, document);
+</script>
+</body>
+</html>
