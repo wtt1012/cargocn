@@ -700,3 +700,33 @@ header .well-sm {
 .item{float:left; padding:3px 5px; border:1px solid #bfe9f7; margin:5px; cursor: pointer; border-radius: 4px;}
 .item.active{background: #00a9e0; color:#fff; border-color: #00a9e0;}
 .item:active,.item:hover{background: #00a9e0; color:#fff; border-color: #00a9e0;}
+.shareHide{display: none}
+.row-contain{margin-left:100px;}
+.wxshare{margin: 0 20px}
+.gray{color:#808080;margin: 5px 10px}
+.green{color:green;margin: 5px 10px}
+.icon-white{color: #fff}
+.img-er{margin-right:10px}
+.border-success {border:2px solid #13CC1D;background-color:#fff}
+.border-default {border:2px solid #148cdc;background-color:#fff}
+.btn-social {
+    position: relative;
+    padding-left: 66px;
+    text-align: left;
+}
+.btn-social>:first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    line-height: 44px;
+    font-size: 1.6em;
+    text-align: center;
+    background-color:#13CC1D;
+}
+
+.social-icon{margin-top:50px;display: inline-block}
+
+#erweima{position: fixed;left: 300px;top: 79px;}
+// .shareShow{display: block}
