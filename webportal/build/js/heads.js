@@ -566,8 +566,8 @@ CHENGDA = {},
 CHENGDA.www = {},
 CHENGDA.www.userData = {},
 CHENGDA.www.CHENGDAWWWINIT = function(d) {
+    //get menu-item selected 
     var g = function(a) {
-
         switch (a) {
         case "quote-detail":
         case "quote-list":
@@ -586,6 +586,7 @@ CHENGDA.www.CHENGDAWWWINIT = function(d) {
             $("#mainMenu>li").eq(4).addClass("active")
         }
     }
+    //get access_token
     , j = function(a) {
         try {
             JSON.parse(Base64.decode(getCookie("access_token"))).data.token;
@@ -665,7 +666,7 @@ CHENGDA.www.CHENGDAWWWINIT = function(d) {
         })
     }
     , c = function() { 
-        $("#mainMenu").off("click").on("click", 'a[class="n"]', function(e) {
+        $("#menu-main").off("click").on("click", 'a[class="menu-item"]', function(e) {
             switch (e.preventDefault(),
             $(this).attr("href")) {
             case "quote-detail.html":
