@@ -6547,6 +6547,13 @@ body {
         padding: 30px 0;
         background: #252525
 }
+
+.footer span{
+   color: #e0e0e0;
+}
+.footer a{
+    color: #b0b0b0;
+}
 .footer-top{
     padding-top: 44px;
    // padding-bottom: 44px;
