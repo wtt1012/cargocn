@@ -13,8 +13,8 @@
 
 <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"> 
 <link rel="stylesheet" type="text/css" href="../build/css/global.css">
-<link rel="stylesheet" type="text/css" href="../build/css/contact.css">
-<!-- <link rel="stylesheet" type="text/css" href="../build/css/style.css"> -->
+<link rel="stylesheet" type="text/css" href="../build/css/main.css">
+<link rel="stylesheet" type="text/css" href="../build/css/liMarquee.css">
 <link href="../vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
 <link href="../vendor/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css">
 <link href="../vendor/select2-bootstrap-theme/dist/select2-bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -28,6 +28,7 @@
 <!-- <script src="build/js/maxZindex.js"></script> -->
 <script src="../vendor/select2/dist/js/select2.full.min.js"></script>
 <script src="../vendor/select2/dist/js/i18n/zh-CN.js"></script>
+<script src="../build/js/jquery.liMarquee.js"></script>
 <style type="text/css">
 .side.side-2 .item-text.select2Span span{
    font-size: 14px;
@@ -61,7 +62,7 @@
     <header id="header" class="">
         <div class="row header">
             <div class="container">
-            <!-- <a id="logo" href="#" rel="home"></a> -->
+            <a id="logo" href="#" rel="home"></a>
             <nav id="nav" class="main-navigation" role="navigation">
                 <ul id="menu-main" class="menu">
                     <li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="">首页</a></li>
@@ -150,35 +151,65 @@
      <div class="item-wrap" style="background: url(../build/images/pattern.png)">
         <div class="item-text select2Span">
                 <div class="container">
-                    <div class="col-ms-12 col-md-6">
-                        <div class="picture">
-                        <div class="text animated">货主<br>海量车源 <span class="black">在线调度</span></div>
-                        <img class="pic animated" src="../build/images/1.png" alt="Web Design Company" width="320" height="382">
-                        </div>
+                    <div class="col-md-7">
+                           <div class="text-left text-blue"><h1>货先生<a class="w">货主版</a></h1></div>
+                           <div class="col-md-7 shipper"><h5>找运力，就找货先生，省时！省心！省力！</h5></div>
+                           <div class="col-md-3"><button type="button" class="border-blue btn-social-blue wxshare"><i class="fa fa-mobile fa-3x icon-white"></i> 下载货主APP</button></div>
+                              <div class="wemcn">
+                                  <div id="ewm" class="ewmDiv clearfix">
+                                      <img id="ewmimg" class="ewmimg" src="http://cargocn.com/images/shipper_big.png">
+                                      <div class="rwmtext"> 
+                                          <p>扫码下载</p>
+                                          <p>货先生货主APP</p>
+                                      </div>
+                                  </div>
+                                  <i class="fa fa-caret-down fa-2x"></i>
+                              </div>
                     </div>
-                     <div class="col-ms-12 col-md-6"> 
-                       <div class="center-text">  
+                    <div class="col-md-7">
+                          <div class="barnav">
+                               <ul>
+                                   <li><i class="fa fa-circle icon-white" ></i>海量车源，在线调度</li>
+                                   <li><i class="fa fa-circle icon-white" ></i>找车发货，及时高效</li>
+                                   <li><i class="fa fa-circle icon-white" ></i>实名认证，安全可靠</li>
+                                   <li><i class="fa fa-circle icon-white" ></i>签订合同，正规发票</li>
+                               </ul>
+                           </div>
+                    </div> 
+                    <div class="col-md-6">
+                      
+                          <div class="now_data">
+
+                              <ul>
+                              <li><span class="time">19:28</span><span class="user">183******48</span><span class="wu">委托了 <i>38.865</i>吨货物</span><span class="state">正在询价</span></li>
+                              <li><span class="time">19:25</span><span class="user">139******18</span><span class="wu">委托了 <i>29.27</i>吨货物</span><span class="state">正在询价</span></li>
+                              <li><span class="time">19:28</span><span class="user">183******48</span><span class="wu">委托了 <i>38.865</i>吨货物</span><span class="state">正在询价</span></li>
+                              <li><span class="time">19:25</span><span class="user">139******18</span><span class="wu">委托了 <i>29.27</i>吨货物</span><span class="state">正在询价</span></li>
+                               <li><span class="time">19:28</span><span class="user">183******48</span><span class="wu">委托了 <i>38.865</i>吨货物</span><span class="state">正在询价</span></li>
+                              <li><span class="time">19:25</span><span class="user">139******18</span><span class="wu">委托了 <i>29.27</i>吨货物</span><span class="state">正在询价</span></li>
+                              </ul>
+                          </div>
+                          
+                    </div>
+                    <div class="col-ms-12 col-md-6" style="float:right"> 
+                        <div class="pull-left">  
                                 <div class="picture table animated">
-                                       <div style="filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4c000000', endColorstr='#4c000000'); background: rgba(0, 0, 0, 0.2); border:none; border-radius: 4px;">
-                                       
-                                                        <div class="box-content" style="border:none; padding:20px;">
+
+                                        <div class="box-content" style="border:none; padding:20px;">
                                                             <form id="contactForm" method="POST" autocomplete="off">
                                                                 <div class="row">
-                                                                    <div class="input-icon left" style="margin:15px"> <!-- <i class="fa fa-user"></i> -->
-                                                                       <!--  <input style="border:0;" type="text" data-msg-required="装货地址" class="form-control" name="send_index" id="send_index" placeholder="请选择装货地址" required readonly> -->
+                                                                    <div class="input-icon left" style="margin:15px"> 
                                                                       <select class="select2" name="send_index" id="send_index"></select>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
-                                                                    <div class="input-icon left" style="margin:15px;"> <!-- <i class="fa fa-unlock-alt"></i> -->
-                                                                        <!-- <input style="border:0;" type="text" data-msg-required="卸货地址" class="form-control" name="arrive_index" id="arrive_index" placeholder="请选择卸货地址" required readonly> -->
+                                                                    <div class="input-icon left" style="margin:15px;"> 
                                                                         <select class="select2" name="arrive_index" id="arrive_index"></select>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-md-12" style="margin-top:22px;">
-                                                                        <!-- <input id="index_send" type="button" value="在线询价" class="btn btn-primary btn-lg btn-block" data-loading-text="在线询价" style="border-radius: 4px"> -->
-                                                                        <a href="../pages/site/enquiry.html" type="button" class="btn btn-primary btn-lg btn-block" style="color:#fff;">在线询价</a>
+                                                                        <a href="../webportal/enquiry.html" type="button" class="btn btn-primary btn-lg btn-block" style="color:#fff;">在线询价</a>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row" style="font-size:12px">
@@ -191,9 +222,10 @@
                                                             </form>
                                                         </div>
                                                     </div>
-                                            
-                                </div>
 
+                        </div>
+                        <div class="picture">
+                           <img class="pic animated" src="../build/images/4.png" alt="Web Design Company" width="162" height="333">
                         </div>
                     </div>
                 </div> 
@@ -202,41 +234,105 @@
 
     </section>
     <section id="identity" class="side side-3">
-    <div class="item-wrap" style="background: url(../build/images/pattern.png)">
-    <div class="item-text">
-    <div class="text animated">承运<br/>自营车队<span class="black">快速安心</span></div>
-    <div class="picture">
-    <img class="pic animated" src="../build/images/2.png" alt="Website Development Firm" width="301" height="403">
-    </div>
-    </div>
-    </div>
+      <div class="item-wrap" style="background: url(../build/images/pattern.png)">
+          <div class="item-text">
+                  <div class="container">
+                      <div class="col-md-6">
+                          <div class="col-md-12">
+                                 <div class="text-left text-blue"><h1>货先生<a class="w">承运版</a></h1></div>
+                                 <div class="col-md-5 shipper"><h4>找货调车就找货先生</h4></div>
+                                 <div class="col-md-3"><button type="button" class="border-blue btn-social-blue wxshare"><i class="fa fa-mobile fa-3x icon-white"></i> 下载承运APP</button></div>
+                                    <div class="wemcn">
+                                        <div id="ewm" class="ewmDiv clearfix">
+                                            <img id="ewmimg" class="ewmimg" src="http://cargocn.com/images/logistics_big.png">
+                                            <div class="rwmtext"> 
+                                                <p>扫码下载</p>
+                                                <p>货先生承运APP</p>
+                                            </div>
+                                        </div>
+                                        <i class="fa fa-caret-down fa-2x"></i>
+                                    </div>
+                          </div>
+                          <div class="col-md-12">
+                                  <div class="barnav">
+                                     <ul>
+                                         <li><i class="fa fa-circle icon-white" ></i>货源真实价格好</li>
+                                         <li><i class="fa fa-circle icon-white" ></i>海量司机任调度</li>
+                                         <li><i class="fa fa-circle icon-white" ></i>快速结款运无忧</li>
+                                     </ul>
+                                  </div>
+                          </div> 
+      <!--     <div class="text animated">承运<br/>自营车队<span class="black">快速安心</span></div> -->
+                      </div> 
+                      <div class="col-md-6 pull-right">   
+                          <div class="picture">
+                             <img class="pic animated" src="../build/images/1.png" alt="Website Development Firm" width="421" height="512">
+                          </div>
+                      </div>    
+                  </div>
+          </div>
+      </div>
     </section>
     <section id="personal" class="side side-4">
-    <div class="item-wrap" style="background: url(../build/images/pattern.png)">
-    <div class="item-text">
-    <div class="text animated">司机<br>车辆资源<span class="black">聚集优化</span></div>
-    <div class="picture">
-    <img class="pic animated" src="../build/images/3.png" alt="Web Design Agency" width="312" height="424">
-    </div>
-    </div>
-    </div>
+      <div class="item-wrap" style="background: url(../build/images/pattern.png)">
+          <div class="item-text">
+               <div class="container">
+                          <div class="col-md-6">
+                              <div class="col-md-12">
+                                     <div class="text-left text-blue"><h1>货先生<a class="w">司机版</a></h1></div>
+                                     <div class="col-md-6 shipper"><h4>找货更方便，结款更便捷</h4></div>
+                                     <div class="col-md-3"><button type="button" class="border-blue btn-social-blue wxshare"><i class="fa fa-mobile fa-3x icon-white"></i> 下载司机APP</button></div>
+                                       <div class="wemcn">
+                                            <div id="ewm" class="ewmDiv clearfix">
+                                                <img id="ewmimg" class="ewmimg" src="http://cargocn.com/images/cargocn_driver.png">
+                                                <div class="rwmtext"> 
+                                                    <p>扫码下载</p>
+                                                    <p>货先生司机APP</p>
+                                                </div>
+                                            </div>
+                                            <i class="fa fa-caret-down fa-2x"></i>
+                                        </div>
+                              </div>
+                              <div class="col-md-12">
+                                      <div class="barnav">
+                                         <ul>
+                                             <li><i class="fa fa-circle icon-white" ></i>精准货源，一目了然</li>
+                                             <li><i class="fa fa-circle icon-white" ></i>精准货源，一目了然</li>
+                                             <li><i class="fa fa-circle icon-white" ></i>提现方便，查询快捷</li>
+                                             <li><i class="fa fa-circle icon-white" ></i>加油轮胎，保险换车</li>
+                                         </ul>
+                                      </div>
+                              </div> 
+          <!--     <div class="text animated">承运<br/>自营车队<span class="black">快速安心</span></div> -->
+                          </div>
+                          <div class="col-md-6 pull-right"> 
+                              <div class="picture">
+                              <img class="pic animated" src="../build/images/2.png" alt="Web Design Agency" width="318" height="428">
+                              </div>
+                          </div>
+               </div>
+      <!--     <div class="text animated">司机<br>车辆资源<span class="black">聚集优化</span></div> -->
+
+          </div>
+      </div>
     </section>
-     <section id="style" class="side side-5">
-         <div class="item-wrap" style="background: url(../build/images/pattern.png)">
-    <div class="item-text">
-    <div class="text animated">
-       金融<br>
-       <span class="black"><!-- 平台优质客户，优享低息小额贷款、应收帐款质押融资、应收账款池融资、国内保理等服务，让您资金畅通无阻。
-           资金流转、信誉评级双闭环，降低信贷风险。 -->
-        </span>
-    </div>
-    <div class="picture">
-    <img class="pic animated" src="../build/images/4.png" alt="Web Design Agency" width="224" height="451">
-    </div>
-    </div>
-    </div>
+    <section id="style" class="side side-5">
+      <div class="item-wrap" style="background: url(../build/images/pattern.png)">
+        <div class="item-text">
+        <div class="text animated">
+           合作伙伴<br>
+           <span class="black"><!-- 平台优质客户，优享低息小额贷款、应收帐款质押融资、应收账款池融资、国内保理等服务，让您资金畅通无阻。
+               资金流转、信誉评级双闭环，降低信贷风险。 -->
+            </span>
+        </div>
+        <div class="picture">
+        <img class="pic animated" src="../build/images/3.png" alt="Web Design Agency" width="224" height="451">
+        </div>
+        </div>
+      </div>
 
     </section>  
+
 
     </div> 
 </div> 
@@ -270,37 +366,40 @@
         <div class="row footer-top">
             <div class="col-md-8 col-lg-8">
                 <table border="0" width="100%" frame="void" rules="none" cellspacing="1" cellpadding="1">
-                    <tbody>
-                        <tr style="text-align: center;" valign="top">
-                        <td>
-                        <h5 data-fontsize="13" data-lineheight="14"><strong><span style="color: #e0e0e0;">关于我们</span></strong></h5>
-                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="公司简介" href="about.html" target="_blank">公司简介</a></span></h5>
-                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="发展历程" href="about.html#growth" target="_blank">发展历程</a></span></h5>
-                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="管理团队" href="about.html#team" target="_blank">管理团队</a></span></h5>
-                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="联系我们" href="about.html#contact" target="_blank">联系我们</a></span></h5>
+                     <tbody>
+                    <tr style="text-align: center;" valign="top">
+                    <td>
+                    <h5 data-fontsize="13" data-lineheight="14"><strong><span>关于我们</span></strong></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span><a title="公司简介" href="../webportal/about.html" target="_blank">公司简介</a></span></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span><a title="发展历程" href="../webportal/about.html#growth" target="_blank">发展历程</a></span></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span><a title="管理团队" href="../webportal/about.html#team" target="_blank">管理团队</a></span></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span><a title="联系我们" href="../webportal/about.html#contact" target="_blank">联系我们</a></span></h5>
 
-                        </td>
-                       
-                        <td>
-                        <h5 data-fontsize="13" data-lineheight="14"><strong><span style="color: #e0e0e0;">资源管理</span></strong></h5>
-                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="下载中心" href="download.html" target="_blank">下载中心</a></span></h5>
-                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="产品中心" href="product.html" target="_blank">产品中心</a></span></h5>
-                        </td>
-                        <td>
-                        <h5 data-fontsize="13" data-lineheight="14"><strong><span style="color: #e0e0e0;">帮助中心</span></strong></h5>
-                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="个人中心" href="" target="_blank">个人中心</a></span></h5>
-                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="客户服务" href="service.html" target="_blank">客户服务</a></span></h5>
-                        <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="联系我们" href="about.html#contact" target="_blank">联系我们</a></span></h5>
-                        </td>
-                        </tr>
+                    </td>
+                   
+                    <td>
+                    <h5 data-fontsize="13" data-lineheight="14"><strong><span>资源管理</span></strong></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span><a title="下载中心" href="../webportal/download.html" target="_blank">下载中心</a></span></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span><a title="产品中心" href="../webportal/product.html" target="_blank">产品中心</a></span></h5>
+                    </td>
+                    <td>
+                    <h5 data-fontsize="13" data-lineheight="14"><strong><span>帮助中心</span></strong></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span><a title="个人中心" href="" target="_blank">个人中心</a></span></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span><a title="客户服务" href="../webportal/service.html" target="_blank">客户服务</a></span></h5>
+                    <h5 data-fontsize="13" data-lineheight="14"><span><a title="联系我们" href="../webportal/about.html#contact" target="_blank">联系我们</a></span></h5>
+
+                    </td>
+
+
+                    </tr>
                     </tbody>
                 </table>
             </div>
             <div class="fusion-clearfix"></div>
-                   <div class="col-md-4 col-lg-4"> <h5 data-fontsize="13" data-lineheight="14"><strong><span style="color: #e0e0e0;">商务合作</span></strong></h5>
-                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="下载中心" href="" target="_blank">服务热线：400-856-5886</a></span></h5>
-                    <h5 data-fontsize="13" data-lineheight="14"><span style="color: #b0b0b0;"><a style="color: #b0b0b0;" title="文档中心" href="" target="_blank">企业邮箱：Service@Cargocn.com</a></span></h5>
-                    </div>
+                       <div class="col-md-4 col-lg-4"> <h5 data-fontsize="13" data-lineheight="14"><strong><span>商务合作</span></strong></h5>
+                        <h5 data-fontsize="13" data-lineheight="14"><span><a title="下载中心" href="" target="_blank">服务热线：400-856-5886</a></span></h5>
+                        <h5 data-fontsize="13" data-lineheight="14"><span><a title="文档中心" href="" target="_blank">企业邮箱：Service@Cargocn.com</a></span></h5>
+                       </div>
              </div>
 
         <div class="row footer-bottom">
@@ -464,17 +563,18 @@ $(document).ready(function() {
             //$(i).parent("li").addClass("active").siblings().removeClass("active")
         })
     })
-    // $(".select2-basic").select2({
-    //      language:'zh-CN',
-    //      width:'100%',
-    //      theme:'bootstrap',
-    //      placeholder: '请选择',
-    //      allowClear:true
-    //      // tags: true,
-    //      // templateResult: formatState,
-    //      // templateSelection: formatState
-    // })
+   //分享
+$(".wxshare").on("click",function() {
+         
+          $(".wemcn").toggle();
+ });
 })
+
+$(function(){
+    $('.now_data').liMarquee({
+        direction: 'up'
+    });
+});
 </script>
 </body>
 </html>
