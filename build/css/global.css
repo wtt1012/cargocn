@@ -75,7 +75,7 @@ a:active,a:hover {
 }
 
 .side.side-2 img {
-    width: 320px
+    width: 162px
 }
 
 .side.side-3 .item-text .item-h {
@@ -83,7 +83,7 @@ a:active,a:hover {
 }
 
 .side.side-3 img {
-    width: 301px
+    width: 400px
 }
 
 .side.side-4 .item-text .item-h {
@@ -91,7 +91,7 @@ a:active,a:hover {
 }
 
 .side.side-4 img {
-    width: 312px
+    width: 318px
 }
 
 .side.side-5 .item-text .item-h {
@@ -3596,19 +3596,19 @@ a:active,a:hover {
 }
 #navi .nav-1 a.active {
 
-    background: #31BEBC;
+    background: #f6f4f4;
 }
 #navi .nav-2 a.active {
  
-    background: #ffeb0a;
+    background: #cd574e;
 }
 #navi .nav-3 a.active {
 
-    background: #0aa6ff;
+    background: #32bfbd;
 }
 #navi .nav-4 a.active {
 
-    background: #e1564c;
+    background: #159ae6;
 }
 
 
@@ -3618,22 +3618,22 @@ a:active,a:hover {
 
 }
 #navi .nav-1 a:hover{
-    background: #31BEBC;
+    background: #f6f4f4;
     border-radius: 7px;
 
 }
 #navi .nav-2 a:hover{
-    background: #ffeb0a;
+    background: #cd574e;
     border-radius: 7px;
 
 }
 #navi .nav-3 a:hover{
-    background: #0aa6ff;
+    background: #32bfbd;
     border-radius: 7px;
 
 }
 #navi .nav-4 a:hover{
-    background: #e1564c;
+    background: #159ae6;
     border-radius: 7px;
 
 }
@@ -3669,6 +3669,7 @@ a:active,a:hover {
 #navi li span { 
     font: 15px/47px Microsoft YaHei;
     color: #fff;
+    text-shadow: 1px 1px 0 rgba(25, 26, 26, 0.75)
 
     }
 
@@ -3715,19 +3716,18 @@ a:active,a:hover {
 }
 
 .side-2 {
-    background: #2acfcd
+    background: #f6f4f4
 }
-
 .side-3 {
-    background: #ffeb0a
+    background: #cd574e
 }
 
 .side-4 {
-    background: #0aa6ff
+    background: #32bfbd
 }
 
 .side-5 {
-    background: #e1564c
+    background: #159ae6
 }
 
 .side-6 {
