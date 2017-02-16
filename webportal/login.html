@@ -1,5 +1,5 @@
 <div class="portlet-body form">
-    <form action="#" id="logins_form" class="form-horizontal" novalidate="novalidate">
+    <form id="logins_form" class="form-horizontal" novalidate="novalidate">
         <div class="form-body">
             <div class="form-group">
                 <label class="control-label col-md-3">手机号 <span class="required" aria-required="true">
@@ -8,44 +8,21 @@
                 <div class="col-md-8">
                     <div class="input-icon right">
                         <i class="fa"></i>
-                        <input type="text" class="form-control" name="phone" id="phone" placeholder="请输入手机号">
+                        <input type="text" class="form-control" name="userPhone" id="userPhone" placeholder="请输入手机号">
                     </div>
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-3">密码 <span class="required" aria-required="true">
+                <label class="control-label col-md-3">验证码 <span class="required" aria-required="true">
                 * </span>
                 </label>
                 <div class="col-md-8">
-                    <div class="input-icon right">
+                    <div class="input-icon input-group right">
                         <i class="fa"></i>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="请输入密码">
-                    </div>
-                </div>
-            </div>
-			
-			<div class="form-group" id="imgcodecont" style="display:none;">
-                <label class="control-label col-md-3" style="padding-right: 0px;">图形验证码 <span class="required" aria-required="true">
-                * </span>
-                </label>
-                <div class="col-md-4">
-                    <div class="input-icon right">
-                        <i class="fa"></i>
-                        <input type="text" class="form-control" name="imgcodeinput" id="imgcodeinput" placeholder="图形验证码">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <img src="http://pc.fuyoukache.com/common/imageCode?img=0.661217046192214" alt="点击获取" id="imgcode">
-                </div>
-            </div>
-			
-            <div class="form-group">
-                <label class="control-label col-md-3">
-                </label>
-                <div class="col-md-8">
-                    <div class="checkbox-list">
-                        <label>
-                        <input type="checkbox" value="1" name="service" id="remember_login"> 自动登录</label>
+                        <input type="text" class="form-control" name="verifyCode" id="verifyCode" placeholder="请输入验证码">
+                        <span class="input-group-btn">
+                           <button class="btn btn-default" type="button" id="getValidateCode">获取验证码</button>
+                        </span> 
                     </div>
                 </div>
             </div>
@@ -56,15 +33,81 @@
         <div class="form-group" style="margin-bottom:2px;">
             <div class="form-actions fluid">
                 <div class="col-md-offset-2 col-md-8">
-                    <button type="submit" class="btn btn-primary btn-block btn-lg">登 录</button>
+                   <!--  <button type="submit" class="btn btn-primary btn-block btn-lg">登 录</button> -->
+                   <button type="button" class="btn btn-primary btn-block btn-lg" id="logining">登 录</button>
                 </div>
             </div>
         </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-8 text-right">
-                <a href="reset-password.html" target="_blank">找回密码</a>
-            </div>
-        </div>
+      <!--   <div class="form-group">
+          <div class="col-md-offset-2 col-md-8 text-right">
+              <a href="reset-password.html" target="_blank">找回密码</a>
+          </div>
+      </div> -->
     </form>
 </div>
-<script src="js/login.js"></script>
+<!-- <script src="js/login.js"></script> -->
+<script type="text/javascript">
+var BASE_API_URL = "http://localhost/cargocn-cloud-server/";
+$("#getValidateCode").on("click",function(){
+    //debugger;
+    var userPhone = $("#userPhone").val();
+    if(userPhone=="" || userPhone==null) return;
+    $.ajax({
+        url: BASE_API_URL + "/getUserLoginCode.douserPhone=" + userPhone,
+        type: "POST",
+        dataType: "json",
+        success: function(data) {
+           console.log(data);
+        }
+    });
+   /* $.ajax({
+        url: BASE_API_URL + "/getUserLoginCode.do?userPhone=" + userPhone,
+        type: 'GET',
+        dataType: 'jsonp',
+        timeout: 5000,
+        contentType: 'application/json; charset=utf-8',
+        success: function (data) {
+           console.log(result);
+        }
+    });*/
+})
+$("#logining").on("click",function(){
+    //debugger;
+    var userPhone = $("#userPhone").val();
+    var verifyCode = $("#verifyCode").val();
+    if(userPhone=="" || userPhone==null) return;
+    if(verifyCode=="" || verifyCode==null) return;
+    $.ajax({
+        url: BASE_API_URL + "/carfreerWebLogin.do",
+        type: "POST",
+        dataType: "json",
+        data: $("#logins_form").serialize(),
+        success: function(result) {
+           //console.log(data);
+           //{"code":"100","msg":"success","data":{"id":null,"organizationId":null,"username":null,"password":null,"salt":null,"locked":true,"really_name":null,"emailAddr":null,"userTel":"15900000011","companyName":null,"credentialsSalt":"null"}}
+           if(result.code==100){
+              console.log("用户手机号：" + result.data.userTel);
+              if(result.data.locked = false){ //正常的
+                  
+              }else{ //true 未验证通过
+                  
+              }
+           }else{
+
+           }
+        }
+    });
+    /*$.ajax({
+        url: CHENGDA.BASE_API_URL + "/carfreerWebLogin.do?userPhone=" + userPhone + "&verifyCode=" + verifyCode,
+        type: 'GET',
+        dataType: 'jsonp',
+        jsonp:"callback",
+        jsonpCallback:"success_jsonpCallback",
+        timeout: 5000,
+        contentType: 'application/json; charset=utf-8',
+        success: function (data) {
+           console.log(result);
+        }
+    });*/
+})
+</script>

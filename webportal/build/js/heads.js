@@ -562,9 +562,10 @@ String.prototype.sub = function(t) {
     } 
 })(jQuery);
 
-CHENGDA = {},
-CHENGDA.www = {},
-CHENGDA.www.userData = {},
+CHENGDA = {};
+//CHENGDA.BASE_API_URL = "http://localhost/cargocn-cloud-server/";
+CHENGDA.www = {};
+CHENGDA.www.userData = {};
 CHENGDA.www.CHENGDAWWWINIT = function(d) {
     var g = function(a) {
 
