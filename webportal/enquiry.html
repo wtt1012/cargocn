@@ -80,14 +80,9 @@
                               2017-1-19
                             </div>
                         </div>
-                        <!-- <div class="form-group col-md-6">
-                            <label for="inputEmail3" class="col-sm-4 control-label">报价截止时间</label>
-                            <div class="col-sm-8">
-                              <input type="text" class="form-control date form_date" data-date="2017-01-17" data-date-format="yyyy-mm-dd">
-                            </div>
-                        </div> -->
                     </div>
                     <div class="panel-body" style="padding:30px">
+                      <form action="" id="enquiry_form">
                         <div class="row bg-white b-shadow margin-bottom overhidden">
                             <div class="col-md-1 panel-title smallPad" style="height:auto; width:36px;">
                                 <div style="position:absolute; top:50%; margin-top:-44px;">发
@@ -99,55 +94,49 @@
                                 <form action="#" id="second_form" class="form-horizontal" autocomplete="off" novalidate="novalidate">
                                     <div class="form-body">
                                         <a name="one"></a>
-                                            <div class="col-md-6">
-                                                <div class="panel panel-default">
-                                                    <div class="panel-body form-horizontal">
-                                                        <div class="col-md-12 form-group">
-                                                            <label for="ownername" readonly="true" class="control-label col-md-4"><i class="redMark">*</i>发货城市</label>
-                                                            <div class="col-md-6">
-                                                                <select class="select2" name="send_index" id="send_index"></select>
-                                                            </div>
+                                        <div class="col-md-6">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body form-horizontal">
+                                                    <div class="col-md-12 form-group">
+                                                        <label for="ownername" readonly="true" class="control-label col-md-4"><i class="redMark">*</i>发货城市</label>
+                                                        <div class="col-md-6">
+                                                            <select class="select2" name="startAddressId" id="send_index"></select>
                                                         </div>
-                                                        <div class="col-md-12 form-group">
-                                                            <label for="ownertel" class="control-label col-md-4"><i class="redMark">*</i>发货地址</label>
-                                                            <div class="col-md-6">
-                                                                <input id="ownertel" type="text" class="form-control">   
-                                                            </div>
+                                                    </div>
+                                                    <div class="col-md-12 form-group">
+                                                        <label for="startAddress1" class="control-label col-md-4"><i class="redMark">*</i>发货地址</label>
+                                                        <div class="col-md-6">
+                                                            <input id="startAddress1" name="startAddress1" type="text" class="form-control">   
                                                         </div>
-                                                        <div class="col-md-12 form-group">
-                                                            <label for="owneridcardno" class="control-label col-md-4">计划发运时间</label>
-                                                            <div class="col-md-6">
-                                                                <input id="owneridcardno" type="text" class="form-control date form_date" data-date="2017-01-17" data-date-format="yyyy-mm-dd">                                 
-                                                            </div>
+                                                    </div>
+                                                    <div class="col-md-12 form-group">
+                                                        <label for="planStartTime" class="control-label col-md-4">计划发运时间</label>
+                                                        <div class="col-md-6">
+                                                            <input id="planStartTime" name="planStartTime" type="text" class="form-control date form_date" data-date="2017-01-17" data-date-format="yyyy-mm-dd">                                 
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-
-
-                                            <div class="col-md-6">
-                                                <div class="panel panel-default">
-                                                    <div class="panel-body form-horizontal">
-                                                        <div class="col-md-12 form-group">
-                                                            <label for="ownername" readonly="true" class="control-label col-md-4"><i class="redMark">*</i>收货城市</label>
-                                                            <div class="col-md-6">
-                                                                 <select class="select2" name="arrive_index" id="arrive_index"></select>  
-                                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body form-horizontal">
+                                                    <div class="col-md-12 form-group">
+                                                        <label for="ownername" readonly="true" class="control-label col-md-4"><i class="redMark">*</i>收货城市</label>
+                                                        <div class="col-md-6">
+                                                             <select class="select2" name="arriveAddress" id="arrive_index"></select>  
                                                         </div>
-                                                        <div class="col-md-12 form-group">
-                                                            <label for="ownertel" class="control-label col-md-4"><i class="redMark">*</i>收货地址</label>
-                                                            <div class="col-md-6">
-                                                                <input id="ownertel" type="text" class="form-control">
-                                                            </div>
+                                                    </div>
+                                                    <div class="col-md-12 form-group">
+                                                        <label for="arriveAddress1" class="control-label col-md-4"><i class="redMark">*</i>收货地址</label>
+                                                        <div class="col-md-6">
+                                                            <input id="arriveAddress1" name="arriveAddress1" type="text" class="form-control">
                                                         </div>
-                                                        
-                                                       
                                                     </div>
                                                 </div>
                                             </div>
-
+                                        </div>
                                     </div>
-
                                 </form>
                             </div>
                         </div> 
@@ -163,15 +152,15 @@
                                     <div class="form-body">
                                         <a name="two"></a>
                                             <div class="form-group col-md-6">
-                                                <label for="inputEmail3" class="col-sm-4 control-label">货物名称</label>
+                                                <label for="bidName" class="col-sm-4 control-label">货物名称</label>
                                                 <div class="col-sm-8">
-                                                  <input type="text" class="form-control" id="cargo_name">
+                                                  <input type="text" name="bidName" id="bidName" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="inputEmail3" class="col-sm-4 control-label">重量（吨）</label>
+                                                <label for="bidWeight" class="col-sm-4 control-label">重量（吨）</label>
                                                 <div class="col-sm-8">
-                                                  <input type="text" class="form-control" id="cargo_name">
+                                                  <input type="text" name="bidWeight" id="bidWeight" class="form-control">
                                                 </div>
                                             </div>
                                     </div>
@@ -318,12 +307,13 @@
 
                         <div class="form-group" style="margin-top:48px;">
                             <div class="form-actions fluid">
-                                <div class="col-md-offset-4 col-md-4">
-                                    <button id="start_send" class="btn btn-primary btn-block btn-lg">急速发货</button>
+                                <div class="col-md-offset-4 col-md-4"><!-- start_send1 -->
+                                    <button id="send_enquiry" class="btn btn-primary btn-block btn-lg send_enquiry">急速发货</button>
                                 </div>
                                 <label class="col-md-offset-3 col-md-6 text-center" id="button_info"></label>
                             </div>
                         </div>
+                      </form>
                     </div>
                 </div>
             </div>
@@ -456,13 +446,37 @@ var translateToSelect2 = function(flag){
    }
    
    for(var i=0;i<iobject.length;i++){
-      arrs.push({"id": iobject[i].codeId, "text":iobject[i].codeName});
+      //arrs.push({"id": iobject[i].codeId, "text":iobject[i].codeName});
+      arrs.push({"id": iobject[i].codeName, "text":iobject[i].codeName});
    }
    return arrs;
 } 
 var login_flg = false;
 $.fn.select2.defaults.set( "theme", "bootstrap" );
-$(document).ready(function() {
+$(document).ready(function() {//#enquiry_form 
+    $("#send_enquiry").on('click',function(){
+        debugger;
+        console.log($("#enquiry_form").serialize());
+       /* $.ajax({
+            url: BASE_API_URL + "/TmpEnqiryMain/addTmpEnqiry.do",
+            type: "POST",
+            dataType: "json",
+            data: $("#enquiry_form").serialize(),
+            success: function(result) {
+               if(result.code==100){
+                  console.log("用户手机号：" + result.data.userTel);
+                  if(result.data.locked = false){ //正常的
+                      
+                  }else{ //true 未验证通过
+                      
+                  }
+               }else{
+
+               }
+            }
+        });*/
+    })
+
      $(".car_type_box span.item").on('click',function(){
          if(!$(this).hasClass('active')){
             $(this).addClass('active').siblings('span.item').removeClass('active');
@@ -564,8 +578,7 @@ $(function(){
 
 //分享
 $(".wxshare").on("click",function() {
-         
-          $(".shareHide").toggle();
+      $(".shareHide").toggle();
  });
 </script>
 
